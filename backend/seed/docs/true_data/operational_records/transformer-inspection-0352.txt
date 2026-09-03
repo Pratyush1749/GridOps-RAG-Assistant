@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00352
+
+Asset inspection record for transformer XFMR-00352, a 30.49 MVA unit manufactured by Eaton and installed in 2023 (3 years in service). The unit is connected to feeder feeder-007-0177 at substation sub-lisatown-007 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — slight discoloration, within spec. Bushings — minor surface contamination. Cooling fans and radiators were cycling correctly under load. Grounding connections were verified intact. Inspection performed by a Substation Technician under weather conditions: thunderstorms.
+
+SCADA alarm history for XFMR-00352 over the trailing twelve months shows 2 recorded alarms: communication loss (2). 0 of these remain unresolved.
+
+Thermal alarm count (0) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: schedule dissolved gas analysis at the next routine maintenance window.

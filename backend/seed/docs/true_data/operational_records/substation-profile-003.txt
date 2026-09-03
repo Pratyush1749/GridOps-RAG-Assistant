@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-newroberttown-003
+
+Substation sub-newroberttown-003 is a switching substation located in the Northeast region, operating at a 138 kV voltage class. It was commissioned in August 2025 and its current operating status is in_service.
+
+The substation serves 12 distribution feeders, of which 11 are currently energized. Installed transformer capacity across 7 units totals 183.57 MVA. The largest single unit is XFMR-00151 at 51.05 MVA.
+
+Feeder inventory for sub-newroberttown-003: feeder-003-0030 (13.2 kV, 415 A, energized); feeder-003-0082 (4.0 kV, 1172 A, energized); feeder-003-0132 (25.0 kV, 952 A, energized); feeder-003-0135 (12.0 kV, 681 A, energized); feeder-003-0184 (13.2 kV, 1007 A, energized); feeder-003-0285 (25.0 kV, 573 A, energized); feeder-003-0378 (12.0 kV, 930 A, energized); feeder-003-0410 (12.0 kV, 627 A, de-energized); feeder-003-0411 (25.0 kV, 1006 A, energized); feeder-003-0449 (25.0 kV, 812 A, energized); feeder-003-0464 (4.0 kV, 392 A, energized); feeder-003-0473 (34.5 kV, 1084 A, energized).
+
+Over the trailing twelve months, sub-newroberttown-003 recorded 17 outage events across its feeders, including 1 classified P1. Average restoration time (MTTR) across restored events was 238 minutes. The most frequent reported cause was animal contact (3 events).
+
+Operational notes: switching at sub-newroberttown-003 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved.

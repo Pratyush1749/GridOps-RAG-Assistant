@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-lakedebra-005
+
+Substation sub-lakedebra-005 is a switching substation located in the Mountain West region, operating at a 230 kV voltage class. It was commissioned in February 2022 and its current operating status is in_service.
+
+The substation serves 12 distribution feeders, of which 12 are currently energized. Installed transformer capacity across 10 units totals 245.48 MVA. The largest single unit is XFMR-00129 at 57.25 MVA.
+
+Feeder inventory for sub-lakedebra-005: feeder-005-0001 (25.0 kV, 1027 A, energized); feeder-005-0016 (4.0 kV, 669 A, energized); feeder-005-0028 (12.0 kV, 758 A, energized); feeder-005-0038 (13.2 kV, 559 A, energized); feeder-005-0068 (25.0 kV, 617 A, energized); feeder-005-0116 (25.0 kV, 703 A, energized); feeder-005-0126 (12.0 kV, 1146 A, energized); feeder-005-0273 (13.2 kV, 296 A, energized); feeder-005-0281 (13.2 kV, 1064 A, energized); feeder-005-0310 (13.2 kV, 446 A, energized); feeder-005-0374 (25.0 kV, 716 A, energized); feeder-005-0437 (4.0 kV, 633 A, energized).
+
+Over the trailing twelve months, sub-lakedebra-005 recorded 11 outage events across its feeders, including 1 classified P1. Average restoration time (MTTR) across restored events was 242 minutes. The most frequent reported cause was unknown (3 events).
+
+Operational notes: switching at sub-lakedebra-005 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved.

@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-040-0252
+
+Reliability summary for feeder feeder-040-0252, a 25.0 kV distribution circuit rated 1051 A, served from substation sub-newstephanie-040 in the Southwest region. Current feeder status: energized.
+
+Customer base: this feeder serves 3 metered service points — 1 industrial, 2 residential. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 4 recorded events (P1: 1, P4: 3). Average restoration time was 106 minutes across 2 restored events, for a total of approximately 202,508 customer-minutes of interruption on this feeder.
+
+Cause breakdown: vehicle accident — 1 event(s); vegetation contact — 1 event(s); animal contact — 1 event(s); planned maintenance — 1 event(s). No single failure mode dominates this feeder's outage history.

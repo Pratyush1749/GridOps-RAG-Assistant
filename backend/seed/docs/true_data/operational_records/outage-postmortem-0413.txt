@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #413
+
+Outage #413 was recorded on feeder feeder-013-0431 (served from substation sub-newkellystad-013, Southwest region) beginning 2025-11-25 at 13:29 UTC. The event was classified severity P2 and affected approximately 680 customers. Reported cause: planned maintenance.
+
+Service was restored at 2025-11-25 15:57 UTC, giving a total restoration time of 148 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Golf was dispatched at 2026-06-20 14:35 UTC with a recorded response time of 162 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Planned maintenance on Samuel Coves feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #161
+
+Outage #161 was recorded on feeder feeder-024-0169 (served from substation sub-adamsborough-024, Northeast region) beginning 2026-06-25 at 04:05 UTC. The event was classified severity P2 and affected approximately 2140 customers. Reported cause: vehicle accident.
+
+Service was restored at 2026-06-25 05:23 UTC, giving a total restoration time of 78 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew India was dispatched at 2025-09-03 02:01 UTC with a recorded response time of 53 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Vehicle accident on Garcia Lake feeder segment; restored via automatic reclose.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

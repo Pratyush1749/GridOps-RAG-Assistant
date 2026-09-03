@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #82
+
+Outage #82 was recorded on feeder feeder-031-0299 (served from substation sub-eastcourtneychester-031, Midwest region) beginning 2026-03-20 at 22:21 UTC. The event was classified severity P2 and affected approximately 3376 customers. Reported cause: overload.
+
+Service was restored at 2026-03-21 02:06 UTC, giving a total restoration time of 225 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Charlie was dispatched at 2026-07-05 03:59 UTC with a recorded response time of 35 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Overload on Paul Ports feeder segment; restored via automatic reclose.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

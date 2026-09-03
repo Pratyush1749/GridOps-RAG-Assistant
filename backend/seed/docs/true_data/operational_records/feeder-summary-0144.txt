@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-018-0144
+
+Reliability summary for feeder feeder-018-0144, a 34.5 kV distribution circuit rated 334 A, served from substation sub-westmichael-018 in the Northeast region. Current feeder status: maintenance.
+
+Customer base: this feeder serves 0 metered service points — . Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 4 recorded events (P3: 1, P4: 3). Average restoration time was 363 minutes across 3 restored events, for a total of approximately 3,797,734 customer-minutes of interruption on this feeder.
+
+Cause breakdown: animal contact — 1 event(s); vehicle accident — 1 event(s); equipment failure — 1 event(s); overload — 1 event(s). No single failure mode dominates this feeder's outage history.

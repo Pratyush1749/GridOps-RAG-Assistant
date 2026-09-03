@@ -1,0 +1,39 @@
+Substation Operations Overview
+
+A substation is a facility that transforms voltage between transmission and
+distribution levels, or between two distribution voltage classes, and provides
+switching points where feeders, transformers, and protective equipment connect
+to the wider grid. Substations are classified by function as transmission
+substations (typically 115 kV and above), distribution substations (typically
+4 kV to 34.5 kV on the low side), or switching substations, which route power
+between circuits without changing voltage.
+
+Core equipment in a typical substation includes:
+
+- Power transformers, which step voltage up or down between the transmission
+  and distribution systems.
+- Circuit breakers and reclosers, which interrupt fault current and can
+  automatically re-energize a feeder after a transient fault clears.
+- Bus bars, which distribute incoming power to multiple outgoing feeders.
+- Protective relays, which monitor current, voltage, and frequency and trip
+  breakers when they detect a fault condition.
+- SCADA remote terminal units (RTUs), which report equipment status and
+  alarms back to the control center and accept remote switching commands.
+
+Substation status is tracked as in_service (normal operation), maintenance
+(equipment de-energized for planned work, typically under a clearance/tagout
+procedure), or de-energized (unplanned outage or emergency shutdown).
+
+Routine operations at a substation include switching operations (opening or
+closing breakers/disconnects to isolate equipment or restore service),
+periodic inspection of transformer oil levels and temperatures, relay testing,
+and vegetation management around the perimeter. Any switching operation that
+changes the state of equipment feeding customers must be logged with a time,
+operator name, and reason, and coordinated with the control center before
+execution unless it is an emergency response to an active fault.
+
+Access to a substation requires authorization; unaccompanied entry by
+personnel without substation entry training is not permitted, and all
+switching must follow the utility's approved switching order format,
+verified by a second qualified person before execution on transmission-class
+equipment.

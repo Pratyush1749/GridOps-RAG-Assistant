@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #115
+
+Outage #115 was recorded on feeder feeder-045-0276 (served from substation sub-eastdonna-045, Pacific region) beginning 2026-02-18 at 03:32 UTC. The event was classified severity P1 and affected approximately 3647 customers. Reported cause: equipment failure.
+
+Service was restored at 2026-02-18 10:37 UTC, giving a total restoration time of 425 minutes. This exceeded the P1 target restoration window and was flagged for reliability review.
+
+Root cause summary: Equipment failure on Mary Harbor feeder segment; restored via manual crew switching.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

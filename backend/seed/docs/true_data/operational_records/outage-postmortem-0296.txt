@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #296
+
+Outage #296 was recorded on feeder feeder-016-0055 (served from substation sub-portjesseville-016, Southwest region) beginning 2026-04-08 at 23:59 UTC. The event was classified severity P1 and affected approximately 4031 customers. Reported cause: storm damage.
+
+Service was restored at 2026-04-09 03:47 UTC, giving a total restoration time of 228 minutes. This exceeded the P1 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Alpha was dispatched at 2026-01-06 02:12 UTC with a recorded response time of 76 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Storm damage on Hill Port feeder segment; restored via automatic reclose.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

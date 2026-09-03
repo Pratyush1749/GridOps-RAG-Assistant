@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #175
+
+Outage #175 was recorded on feeder feeder-028-0106 (served from substation sub-juliechester-028, Midwest region) beginning 2026-07-06 at 19:11 UTC. The event was classified severity P2 and affected approximately 1663 customers. Reported cause: unknown.
+
+Service was restored at 2026-07-06 21:57 UTC, giving a total restoration time of 166 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Echo was dispatched at 2025-10-01 06:47 UTC with a recorded response time of 94 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Unknown on Freeman Trace feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

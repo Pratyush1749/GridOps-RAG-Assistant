@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-westmichael-018
+
+Substation sub-westmichael-018 is a transmission substation located in the Northeast region, operating at a 230 kV voltage class. It was commissioned in August 2022 and its current operating status is in_service.
+
+The substation serves 10 distribution feeders, of which 7 are currently energized. Installed transformer capacity across 9 units totals 304.08 MVA. The largest single unit is XFMR-00235 at 59.74 MVA.
+
+Feeder inventory for sub-westmichael-018: feeder-018-0066 (13.2 kV, 527 A, de-energized); feeder-018-0131 (34.5 kV, 752 A, energized); feeder-018-0136 (12.0 kV, 799 A, energized); feeder-018-0144 (34.5 kV, 334 A, maintenance); feeder-018-0152 (25.0 kV, 548 A, maintenance); feeder-018-0179 (4.0 kV, 779 A, energized); feeder-018-0201 (4.0 kV, 906 A, energized); feeder-018-0352 (12.0 kV, 840 A, energized); feeder-018-0395 (34.5 kV, 505 A, energized); feeder-018-0489 (25.0 kV, 280 A, energized).
+
+Over the trailing twelve months, sub-westmichael-018 recorded 14 outage events across its feeders, including 2 classified P1. Average restoration time (MTTR) across restored events was 287 minutes. The most frequent reported cause was planned maintenance (4 events).
+
+Operational notes: switching at sub-westmichael-018 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution.

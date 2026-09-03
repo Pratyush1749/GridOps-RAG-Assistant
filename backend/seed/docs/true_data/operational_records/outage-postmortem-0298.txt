@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #298
+
+Outage #298 was recorded on feeder feeder-029-0337 (served from substation sub-coxberg-029, Southwest region) beginning 2026-04-11 at 10:46 UTC. The event was classified severity P2 and affected approximately 1493 customers. Reported cause: unknown.
+
+Service was restored at 2026-04-11 14:33 UTC, giving a total restoration time of 227 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Unknown on Wall Heights feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

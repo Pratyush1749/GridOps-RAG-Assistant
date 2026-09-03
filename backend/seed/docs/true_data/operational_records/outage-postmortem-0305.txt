@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #305
+
+Outage #305 was recorded on feeder feeder-046-0149 (served from substation sub-westallison-046, Southeast region) beginning 2025-11-29 at 00:37 UTC. The event was classified severity P2 and affected approximately 4189 customers. Reported cause: equipment failure.
+
+Service was restored at 2025-11-29 02:03 UTC, giving a total restoration time of 86 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Equipment failure on Christopher Hill feeder segment; restored via automatic reclose.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

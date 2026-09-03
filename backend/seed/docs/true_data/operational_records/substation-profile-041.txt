@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-newmariotown-041
+
+Substation sub-newmariotown-041 is a switching substation located in the Pacific region, operating at a 115 kV voltage class. It was commissioned in July 2026 and its current operating status is in_service.
+
+The substation serves 6 distribution feeders, of which 6 are currently energized. Installed transformer capacity across 6 units totals 123.99 MVA. The largest single unit is XFMR-00427 at 45.27 MVA.
+
+Feeder inventory for sub-newmariotown-041: feeder-041-0064 (13.2 kV, 984 A, energized); feeder-041-0195 (25.0 kV, 1131 A, energized); feeder-041-0261 (13.2 kV, 354 A, energized); feeder-041-0262 (13.2 kV, 1015 A, energized); feeder-041-0309 (25.0 kV, 582 A, energized); feeder-041-0482 (12.0 kV, 269 A, energized).
+
+Over the trailing twelve months, sub-newmariotown-041 recorded 2 outage events across its feeders, including 0 classified P1. Average restoration time (MTTR) across restored events was 224 minutes. The most frequent reported cause was overload (1 events).
+
+Operational notes: switching at sub-newmariotown-041 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved.

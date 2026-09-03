@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-northnoahstad-010
+
+Substation sub-northnoahstad-010 is a distribution substation located in the Pacific region, operating at a 138 kV voltage class. It was commissioned in January 2018 and its current operating status is in_service.
+
+The substation serves 8 distribution feeders, of which 8 are currently energized. Installed transformer capacity across 5 units totals 124.03 MVA. The largest single unit is XFMR-00102 at 52.72 MVA.
+
+Feeder inventory for sub-northnoahstad-010: feeder-010-0067 (12.0 kV, 592 A, energized); feeder-010-0128 (13.2 kV, 1046 A, energized); feeder-010-0159 (25.0 kV, 1187 A, energized); feeder-010-0172 (12.0 kV, 672 A, energized); feeder-010-0209 (12.0 kV, 753 A, energized); feeder-010-0218 (4.0 kV, 329 A, energized); feeder-010-0389 (25.0 kV, 907 A, energized); feeder-010-0400 (13.2 kV, 243 A, energized).
+
+Over the trailing twelve months, sub-northnoahstad-010 recorded 5 outage events across its feeders, including 1 classified P1. Average restoration time (MTTR) across restored events was 301 minutes. The most frequent reported cause was storm damage (1 events).
+
+Operational notes: switching at sub-northnoahstad-010 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved.

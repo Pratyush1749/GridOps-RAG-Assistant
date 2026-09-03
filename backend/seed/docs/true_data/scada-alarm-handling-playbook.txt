@@ -1,0 +1,49 @@
+SCADA Alarm Handling Playbook
+
+SCADA (Supervisory Control and Data Acquisition) systems continuously poll
+remote terminal units at substations and report equipment status, analog
+measurements (current, voltage, temperature), and discrete alarms to the
+control center. Alarms are classified by severity P1 through P4, matching the
+same severity scale used for outages, so operators can triage a mixed queue
+of alarms and outage events consistently.
+
+Alarm severity guidance:
+
+- P1: immediate safety or reliability risk. Examples: differential protection
+  trip, breaker failure, a substation bus undervoltage condition. Requires
+  acknowledgement within 5 minutes and, in most cases, immediate dispatch.
+- P2: significant equipment stress that could escalate. Examples: sustained
+  overcurrent, transformer overtemperature, communication loss to an entire
+  substation (which blinds the control center to that facility's status).
+  Requires acknowledgement within 15 minutes.
+- P3: localized or single-device issue that does not immediately threaten
+  service. Examples: a single sensor reading out of calibration range, a
+  non-critical breaker status discrepancy. Requires acknowledgement within
+  one shift.
+- P4: informational or low-priority. Examples: scheduled-maintenance mode
+  entry/exit, minor voltage sag within tolerance. Reviewed during routine
+  shift handoff.
+
+Standard alarm workflow:
+
+1. Alarm fires and appears in the SCADA alarm list with a timestamp, source
+   equipment, alarm type, and severity.
+2. The on-shift operator acknowledges the alarm (setting acked_by) within the
+   severity-appropriate window above.
+3. The operator determines whether the alarm is a nuisance/instrumentation
+   issue or reflects real equipment behavior, cross-checking related
+   measurements (for example, an overcurrent alarm should correlate with an
+   actual load increase, not appear in isolation).
+4. If real equipment action is required, the operator either issues a remote
+   SCADA command (where the equipment supports remote control and it is safe
+   to do so) or dispatches a field crew.
+5. Once the underlying condition clears, the alarm is marked resolved. Alarms
+   that remain unresolved across a shift change must be explicitly handed off
+   with current status and any action already taken.
+
+"Communication loss" alarms deserve special handling: they mean the control
+center has lost visibility into that substation's real equipment state, not
+that equipment has necessarily failed. Restoring communications (which may
+require a field crew to power-cycle the RTU) should be treated with the same
+urgency as a P2 alarm even though no equipment fault has been confirmed,
+because the control center cannot safely operate blind equipment remotely.

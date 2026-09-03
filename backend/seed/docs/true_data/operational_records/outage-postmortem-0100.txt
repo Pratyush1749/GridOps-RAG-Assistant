@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #100
+
+Outage #100 was recorded on feeder feeder-045-0047 (served from substation sub-eastdonna-045, Pacific region) beginning 2026-02-17 at 00:07 UTC. The event was classified severity P2 and affected approximately 2094 customers. Reported cause: equipment failure.
+
+Service was restored at 2026-02-17 01:48 UTC, giving a total restoration time of 101 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Foxtrot was dispatched at 2026-01-05 13:55 UTC with a recorded response time of 117 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Equipment failure on Dylan Cape feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

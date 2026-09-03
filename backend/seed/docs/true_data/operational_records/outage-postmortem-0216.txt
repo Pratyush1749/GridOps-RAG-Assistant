@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #216
+
+Outage #216 was recorded on feeder feeder-034-0290 (served from substation sub-lakenicoleview-034, Midwest region) beginning 2025-09-18 at 09:56 UTC. The event was classified severity P2 and affected approximately 2856 customers. Reported cause: planned maintenance.
+
+Service was restored at 2025-09-18 16:28 UTC, giving a total restoration time of 392 minutes. This exceeded the P2 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Golf was dispatched at 2026-03-18 15:25 UTC with a recorded response time of 120 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Planned maintenance on Charles Expressway feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

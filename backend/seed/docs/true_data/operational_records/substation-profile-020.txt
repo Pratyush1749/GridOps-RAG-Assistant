@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-newjessica-020
+
+Substation sub-newjessica-020 is a distribution substation located in the Mountain West region, operating at a 115 kV voltage class. It was commissioned in March 2020 and its current operating status is de-energized.
+
+The substation serves 11 distribution feeders, of which 10 are currently energized. Installed transformer capacity across 8 units totals 174.26 MVA. The largest single unit is XFMR-00014 at 56.79 MVA.
+
+Feeder inventory for sub-newjessica-020: feeder-020-0046 (34.5 kV, 516 A, energized); feeder-020-0054 (12.0 kV, 1025 A, energized); feeder-020-0087 (34.5 kV, 893 A, de-energized); feeder-020-0105 (34.5 kV, 577 A, energized); feeder-020-0107 (13.2 kV, 436 A, energized); feeder-020-0129 (34.5 kV, 966 A, energized); feeder-020-0235 (13.2 kV, 559 A, energized); feeder-020-0277 (34.5 kV, 585 A, energized); feeder-020-0324 (25.0 kV, 817 A, energized); feeder-020-0381 (34.5 kV, 544 A, energized); feeder-020-0396 (13.2 kV, 921 A, energized).
+
+Over the trailing twelve months, sub-newjessica-020 recorded 8 outage events across its feeders, including 0 classified P1. Average restoration time (MTTR) across restored events was 170 minutes. The most frequent reported cause was animal contact (2 events).
+
+Operational notes: switching at sub-newjessica-020 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved. This substation is currently in de-energized state; confirm clearance status before dispatching any crew to site.

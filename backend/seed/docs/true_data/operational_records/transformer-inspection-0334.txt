@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00334
+
+Asset inspection record for transformer XFMR-00334, a 12.20 MVA unit manufactured by GE Vernova and installed in 2000 (26 years in service). The unit is connected to feeder feeder-030-0220 at substation sub-daviston-030 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — darkened — schedule dielectric test. Bushings — no visible tracking. Cooling fans and radiators were operating normally. Grounding connections were verified intact. Inspection performed by a Asset Inspector under weather conditions: extreme heat advisory.
+
+SCADA alarm history for XFMR-00334 over the trailing twelve months shows 3 recorded alarms: communication loss (1), differential protection trip (1), voltage sag (1). 0 of these remain unresolved.
+
+Thermal alarm count (0) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: clean bushing surfaces during the next scheduled outage window.

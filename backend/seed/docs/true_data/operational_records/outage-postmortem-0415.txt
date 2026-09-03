@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #415
+
+Outage #415 was recorded on feeder feeder-045-0145 (served from substation sub-eastdonna-045, Pacific region) beginning 2026-07-30 at 21:23 UTC. The event was classified severity P2 and affected approximately 1704 customers. Reported cause: storm damage.
+
+Service was restored at 2026-07-31 00:36 UTC, giving a total restoration time of 193 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Alpha was dispatched at 2025-09-04 06:34 UTC with a recorded response time of 16 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Storm damage on Randy Inlet feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #395
+
+Outage #395 was recorded on feeder feeder-021-0397 (served from substation sub-southnoah-021, Southeast region) beginning 2026-06-15 at 20:45 UTC. The event was classified severity P2 and affected approximately 118 customers. Reported cause: planned maintenance.
+
+Service was restored at 2026-06-15 22:30 UTC, giving a total restoration time of 105 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Planned maintenance on Nelson Throughway feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

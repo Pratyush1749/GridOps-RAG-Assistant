@@ -1,0 +1,47 @@
+Storm Event Emergency Response Plan
+
+When weather forecasting indicates a high probability of widespread outages
+(major windstorm, ice storm, or hurricane), the utility activates its
+Emergency Response Plan (ERP) ahead of the event rather than waiting for
+outages to occur.
+
+Pre-storm activation steps:
+
+1. The control center is staffed to 24-hour coverage and additional
+   dispatchers are brought on to handle an expected surge in simultaneous
+   outage events.
+2. Internal crews are placed on standby, and if the forecast severity
+   exceeds internal crew capacity, mutual-aid crews are requested from
+   neighboring utilities under existing mutual-assistance agreements.
+3. Staging sites are identified near the expected impact area so crews and
+   material (poles, transformers, wire, crossarms) can be pre-positioned
+   rather than dispatched from a central depot after the storm hits.
+4. Substations and feeders serving critical facilities (hospitals, water
+   treatment, emergency dispatch centers) are reviewed for backup supply
+   options (alternate feed, mobile generation) in case primary supply is
+   lost.
+
+During-storm operations differ from blue-sky (normal weather) operations in
+several ways:
+
+- Dispatch priority shifts from strict severity order to a
+  "restore-the-most-customers-per-crew-hour" model, described in the outage
+  severity and crew dispatch procedure, since crew capacity is the binding
+  constraint during a major event.
+- Individual outage tickets may be consolidated: a single major storm can
+  generate thousands of outage events in a short window, and dispatch groups
+  nearby events into a single restoration job where a common cause (for
+  example, a fallen tree taking down multiple spans) is identified.
+- Public communication shifts to broader estimated-restoration-time (ERT)
+  updates by region rather than per-customer updates, since individual ERTs
+  cannot be reliably estimated until damage assessment is complete.
+- A storm is typically declared a "major event day" for reliability
+  reporting purposes if daily system SAIDI exceeds the statistical threshold
+  described in the grid reliability metrics overview; outages during a major
+  event day are excluded from routine (blue-sky) SAIDI/SAIFI reporting but
+  are still tracked and reported separately to regulators.
+
+After the event, the utility conducts a storm debrief covering total
+customers affected, restoration timeline against the ERP's targets, mutual-aid
+crew performance, and any equipment or process gaps identified, feeding into
+updates to the Emergency Response Plan for the next event.

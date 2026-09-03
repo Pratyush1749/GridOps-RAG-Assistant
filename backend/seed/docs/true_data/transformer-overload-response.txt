@@ -1,0 +1,51 @@
+Transformer Overload and Overtemperature Response
+
+Power transformers are rated in MVA (megavolt-amperes) and are designed to
+operate continuously at or below their nameplate capacity. Loading above
+nameplate for extended periods accelerates insulation aging and, if sustained
+long enough, can cause internal arcing, oil breakdown, or catastrophic
+failure.
+
+Common SCADA alarm types associated with transformer distress:
+
+- "transformer overtemperature": top-oil or winding temperature has exceeded
+  a configured threshold. A P2 alarm typically indicates elevated but
+  survivable loading; a P1 alarm indicates the transformer is approaching a
+  trip setpoint.
+- "overcurrent": current on the transformer's low-side or high-side bushings
+  has exceeded a percentage of nameplate rating, often correlated with peak
+  demand periods (summer afternoons for air-conditioning load, winter
+  mornings for heating load).
+- "low oil level": the conservator or main tank oil level has dropped below
+  the normal band, which can indicate a leak and reduces the transformer's
+  cooling and dielectric margin.
+- "differential protection trip": internal fault protection has detected a
+  current imbalance between the transformer's windings, consistent with an
+  internal short. This alarm should be treated as P1 and the transformer
+  should not be re-energized without inspection.
+
+Recommended response procedure:
+
+1. On an overtemperature or overcurrent alarm, dispatch operations should
+   check current loading against the transformer's nameplate MVA rating and
+   compare against the same time last week to determine whether the load is
+   abnormal or expected seasonal peak.
+2. If loading exceeds 100% of nameplate and is expected to persist (for
+   example during a heat event), initiate load transfer to a neighboring
+   feeder/transformer where capacity allows, or request voluntary demand
+   reduction from large commercial/industrial customers on that feeder.
+3. On a low oil level alarm, schedule a field inspection within 24 hours;
+   this is not an immediate trip risk but should not be deferred past one
+   business day.
+4. On a differential protection trip, do not attempt to re-energize the
+   transformer remotely. Dispatch a crew for physical inspection before any
+   switching.
+5. Log every transformer alarm event, its severity, whether it was resolved
+   automatically or required a crew action, and any load-transfer or
+   de-rating decision made, for post-event trending and asset-health
+   analysis.
+
+Transformers with three or more overtemperature or overcurrent alarms within
+a rolling 90-day window should be flagged for a capacity upgrade review,
+since recurring overload alarms are a leading indicator of premature
+transformer failure.

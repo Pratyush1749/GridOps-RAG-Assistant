@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #225
+
+Outage #225 was recorded on feeder feeder-019-0336 (served from substation sub-jacquelineland-019, Northeast region) beginning 2026-07-02 at 11:21 UTC. The event was classified severity P2 and affected approximately 1101 customers. Reported cause: planned maintenance.
+
+Service was restored at 2026-07-02 17:29 UTC, giving a total restoration time of 368 minutes. This exceeded the P2 target restoration window and was flagged for reliability review.
+
+Root cause summary: Planned maintenance on Johnston Track feeder segment; restored via automatic reclose.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

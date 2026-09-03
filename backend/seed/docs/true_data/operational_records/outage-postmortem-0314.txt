@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #314
+
+Outage #314 was recorded on feeder feeder-049-0058 (served from substation sub-samuelhaven-049, Northeast region) beginning 2025-12-27 at 11:22 UTC. The event was classified severity P1 and affected approximately 2714 customers. Reported cause: vegetation contact.
+
+Service was restored at 2025-12-27 12:36 UTC, giving a total restoration time of 74 minutes. This is within the P1 target restoration window.
+
+Crew response: Crew Bravo was dispatched at 2026-08-13 06:05 UTC with a recorded response time of 40 minutes to on-site arrival. Response time met the P1 target of 45 minutes for normal weather conditions.
+
+Root cause summary: Vegetation contact on Davis Locks feeder segment; restored via manual crew switching.
+
+Corrective actions: no corrective action beyond standard repair was identified; the event is considered closed.

@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #389
+
+Outage #389 was recorded on feeder feeder-005-0028 (served from substation sub-lakedebra-005, Mountain West region) beginning 2026-04-30 at 22:01 UTC. The event was classified severity P1 and affected approximately 1627 customers. Reported cause: planned maintenance.
+
+Service was restored at 2026-04-30 23:33 UTC, giving a total restoration time of 92 minutes. This is within the P1 target restoration window.
+
+Root cause summary: Planned maintenance on Moore Inlet feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

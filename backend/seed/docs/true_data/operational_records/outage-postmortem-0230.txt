@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #230
+
+Outage #230 was recorded on feeder feeder-037-0490 (served from substation sub-teresaburgh-037, Southeast region) beginning 2026-07-29 at 09:46 UTC. The event was classified severity P1 and affected approximately 3078 customers. Reported cause: vegetation contact.
+
+Service was restored at 2026-07-29 09:57 UTC, giving a total restoration time of 11 minutes. This is within the P1 target restoration window.
+
+Crew response: Crew Delta was dispatched at 2026-05-18 19:47 UTC with a recorded response time of 165 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Vegetation contact on Morris Cove feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

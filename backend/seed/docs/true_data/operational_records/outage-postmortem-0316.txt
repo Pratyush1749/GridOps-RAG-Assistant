@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #316
+
+Outage #316 was recorded on feeder feeder-016-0055 (served from substation sub-portjesseville-016, Southwest region) beginning 2026-08-18 at 18:36 UTC. The event was classified severity P2 and affected approximately 1561 customers. Reported cause: equipment failure.
+
+As of this report, outage #316 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Crew response: Crew Golf was dispatched at 2025-10-31 19:19 UTC with a recorded response time of 160 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Equipment failure on Richardson Summit feeder segment; restored via automatic reclose.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

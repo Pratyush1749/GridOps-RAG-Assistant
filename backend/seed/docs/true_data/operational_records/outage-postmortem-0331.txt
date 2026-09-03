@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #331
+
+Outage #331 was recorded on feeder feeder-019-0113 (served from substation sub-jacquelineland-019, Northeast region) beginning 2026-02-02 at 10:44 UTC. The event was classified severity P2 and affected approximately 3240 customers. Reported cause: animal contact.
+
+Service was restored at 2026-02-02 17:17 UTC, giving a total restoration time of 393 minutes. This exceeded the P2 target restoration window and was flagged for reliability review.
+
+Crew response: Crew India was dispatched at 2026-08-24 21:54 UTC with a recorded response time of 169 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Animal contact on Hannah Forge feeder segment; restored via automatic reclose.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

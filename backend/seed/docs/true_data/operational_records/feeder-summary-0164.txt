@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-022-0164
+
+Reliability summary for feeder feeder-022-0164, a 34.5 kV distribution circuit rated 589 A, served from substation sub-lakemark-022 in the Midwest region. Current feeder status: maintenance.
+
+Customer base: this feeder serves 1 metered service points — 1 commercial. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 3 recorded events (P2: 1, P4: 2). Average restoration time was 181 minutes across 3 restored events, for a total of approximately 1,158,527 customer-minutes of interruption on this feeder.
+
+Cause breakdown: storm damage — 1 event(s); vegetation contact — 1 event(s); planned maintenance — 1 event(s). No single failure mode dominates this feeder's outage history.

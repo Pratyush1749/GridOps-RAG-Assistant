@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00257
+
+Asset inspection record for transformer XFMR-00257, a 37.65 MVA unit manufactured by GE Vernova and installed in 2024 (2 years in service). The unit is connected to feeder feeder-007-0093 at substation sub-lisatown-007 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — clear, recently filtered. Bushings — light corrosion at flange. Cooling fans and radiators were operating normally with minor debris accumulation. Grounding connections were verified intact. Inspection performed by a Asset Inspector under weather conditions: ice accumulation.
+
+SCADA alarm history for XFMR-00257 over the trailing twelve months shows 2 recorded alarms: differential protection trip (1), voltage sag (1). 0 of these remain unresolved.
+
+Thermal alarm count (0) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: schedule dissolved gas analysis at the next routine maintenance window.

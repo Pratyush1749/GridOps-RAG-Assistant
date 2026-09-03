@@ -1,0 +1,9 @@
+# Feeder Reliability Summary — feeder-016-0146
+
+Reliability summary for feeder feeder-016-0146, a 12.0 kV distribution circuit rated 518 A, served from substation sub-portjesseville-016 in the Southwest region. Current feeder status: energized.
+
+Customer base: this feeder serves 0 metered service points — . Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 2 recorded events (P3: 1, P4: 1). Average restoration time was 108 minutes across 2 restored events, for a total of approximately 246,214 customer-minutes of interruption on this feeder.
+
+Cause breakdown: storm damage — 2 event(s). No single failure mode dominates this feeder's outage history.

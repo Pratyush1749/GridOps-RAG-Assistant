@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #473
+
+Outage #473 was recorded on feeder feeder-032-0471 (served from substation sub-southpatrickmouth-032, Southeast region) beginning 2026-08-22 at 00:35 UTC. The event was classified severity P1 and affected approximately 2038 customers. Reported cause: animal contact.
+
+As of this report, outage #473 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Crew response: Crew Golf was dispatched at 2026-03-17 12:46 UTC with a recorded response time of 123 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Animal contact on Sawyer Plaza feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

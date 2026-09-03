@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-016-0089
+
+Reliability summary for feeder feeder-016-0089, a 4.0 kV distribution circuit rated 913 A, served from substation sub-portjesseville-016 in the Southwest region. Current feeder status: energized.
+
+Customer base: this feeder serves 1 metered service points — 1 commercial. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 2 recorded events (P3: 2). Average restoration time was 390 minutes across 2 restored events, for a total of approximately 2,106,068 customer-minutes of interruption on this feeder.
+
+Cause breakdown: animal contact — 1 event(s); overload — 1 event(s). No single failure mode dominates this feeder's outage history.

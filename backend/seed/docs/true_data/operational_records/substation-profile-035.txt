@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-danielchester-035
+
+Substation sub-danielchester-035 is a transmission substation located in the Northeast region, operating at a 500 kV voltage class. It was commissioned in November 2025 and its current operating status is in_service.
+
+The substation serves 13 distribution feeders, of which 12 are currently energized. Installed transformer capacity across 9 units totals 334.00 MVA. The largest single unit is XFMR-00236 at 54.65 MVA.
+
+Feeder inventory for sub-danielchester-035: feeder-035-0039 (13.2 kV, 1161 A, energized); feeder-035-0044 (12.0 kV, 572 A, energized); feeder-035-0112 (12.0 kV, 480 A, energized); feeder-035-0142 (25.0 kV, 623 A, energized); feeder-035-0199 (25.0 kV, 801 A, energized); feeder-035-0247 (12.0 kV, 712 A, energized); feeder-035-0282 (34.5 kV, 238 A, energized); feeder-035-0339 (13.2 kV, 1112 A, energized); feeder-035-0358 (13.2 kV, 857 A, maintenance); feeder-035-0442 (12.0 kV, 869 A, energized); feeder-035-0443 (25.0 kV, 741 A, energized); feeder-035-0486 (13.2 kV, 217 A, energized).
+
+Over the trailing twelve months, sub-danielchester-035 recorded 13 outage events across its feeders, including 2 classified P1. Average restoration time (MTTR) across restored events was 214 minutes. The most frequent reported cause was planned maintenance (3 events).
+
+Operational notes: switching at sub-danielchester-035 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution.

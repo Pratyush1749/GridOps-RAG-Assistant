@@ -1,0 +1,9 @@
+Monthly Reliability Report — Northeast — December 2025
+
+Monthly reliability report for the Northeast region covering December 2025. This report summarizes distribution reliability performance for all feeders in the region and is prepared for internal review and regulatory submission.
+
+During the reporting period the region recorded 8 outage events 4 at severity P1, 3 at severity P2, 1 at severity P4. 8 events were restored within the period, accounting for approximately 3,827,012 customer-minutes of interruption across 20,135 customer interruptions.
+
+Calculated reliability indices for Northeast in December 2025: SAIDI 51026.83 minutes per customer, SAIFI 268.467 interruptions per customer, CAIDI 190.1 minutes per interrupted customer. These figures are calculated against a served base of 75 metered customers in the region.
+
+Methodology note: SAIDI is the sum of customers affected multiplied by outage duration in minutes, divided by total customers served. SAIFI is total customer interruptions divided by total customers served. CAIDI is SAIDI divided by SAIFI. Momentary interruptions cleared by automatic reclose are excluded from these figures and are tracked separately under MAIFI. Major event days, where daily SAIDI exceeds the statistical threshold, are excluded from routine reporting and reported separately.

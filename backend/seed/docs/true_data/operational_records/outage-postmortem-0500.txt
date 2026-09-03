@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #500
+
+Outage #500 was recorded on feeder feeder-045-0059 (served from substation sub-eastdonna-045, Pacific region) beginning 2026-03-25 at 14:19 UTC. The event was classified severity P1 and affected approximately 242 customers. Reported cause: equipment failure.
+
+Service was restored at 2026-03-25 19:50 UTC, giving a total restoration time of 331 minutes. This exceeded the P1 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Foxtrot was dispatched at 2026-02-20 07:19 UTC with a recorded response time of 162 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Equipment failure on Cynthia Landing feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

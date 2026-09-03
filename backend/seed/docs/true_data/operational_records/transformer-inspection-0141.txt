@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00141
+
+Asset inspection record for transformer XFMR-00141, a 54.98 MVA unit manufactured by Schneider Electric and installed in 2005 (21 years in service). The unit is connected to feeder feeder-007-0177 at substation sub-lisatown-007 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — darkened — schedule dielectric test. Bushings — no visible tracking. Cooling fans and radiators were cycling correctly under load. Grounding connections were verified intact. Inspection performed by a Asset Inspector under weather conditions: extreme heat advisory.
+
+SCADA alarm history for XFMR-00141 over the trailing twelve months shows 4 recorded alarms: breaker trip (1), communication loss (1), differential protection trip (1), transformer overtemperature (1). 0 of these remain unresolved.
+
+Thermal alarm count (1) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: re-inspect at the standard interval; no defects requiring intervention were found.

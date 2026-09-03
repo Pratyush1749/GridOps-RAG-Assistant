@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00205
+
+Asset inspection record for transformer XFMR-00205, a 51.59 MVA unit manufactured by ABB and installed in 1999 (27 years in service). The unit is connected to feeder feeder-037-0084 at substation sub-teresaburgh-037 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — clear, recently filtered. Bushings — minor surface contamination. Cooling fans and radiators were operating normally. Grounding connections were verified intact. Inspection performed by a Field Engineer under weather conditions: clear.
+
+SCADA alarm history for XFMR-00205 over the trailing twelve months shows 2 recorded alarms: communication loss (1), overcurrent (1). 0 of these remain unresolved.
+
+Thermal alarm count (1) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: no action required; return to standard inspection rotation.

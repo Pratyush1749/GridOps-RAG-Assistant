@@ -1,0 +1,39 @@
+Smart Meters and Customer Classes
+
+Every point where the distribution grid connects to a customer is
+represented by a meter, attached to the feeder that serves it. Meters are
+categorized by customer_type: residential, commercial, or industrial.
+Residential meters make up the large majority of the meter population but
+each carries relatively small load; industrial meters are far fewer in
+number but each can represent a significant share of a feeder's total
+capacity, so a single industrial meter's status is often monitored more
+closely than an individual residential meter.
+
+Modern deployments use AMI (Advanced Metering Infrastructure) smart meters,
+which report interval consumption data and can send a "last gasp" message
+over their communication network at the moment power is lost, before their
+backup capacitor depletes. Last-gasp signals from a cluster of meters on the
+same feeder arriving within a short window are one of the fastest ways to
+confirm and scope an outage, often faster than waiting for customer calls.
+
+Meter status values:
+
+- active: normal service, meter is communicating and billing normally.
+- inactive: the account is not currently billed to an occupant (for example,
+  a vacant property), but the meter remains physically connected and
+  energized.
+- disconnected: service has been physically or remotely disconnected, either
+  for non-payment (following the utility's disconnection policy and
+  required notice periods) or at the customer's request.
+
+When evaluating the customer impact of a feeder outage, only meters with
+status active or inactive on that feeder should be counted toward
+customers_affected; disconnected meters were already without service prior
+to the outage and should not be double-counted in reliability reporting.
+
+Restoring a feeder does not guarantee every downstream meter regains power
+individually. Some interruptions occur only on a single service lateral (for
+example, a fault in the wire between a distribution transformer and one
+customer) rather than the whole feeder, and these single-meter events are
+tracked and dispatched the same way as any other outage, typically
+classified P4 given the limited customer count.

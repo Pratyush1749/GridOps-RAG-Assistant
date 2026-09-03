@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #126
+
+Outage #126 was recorded on feeder feeder-018-0201 (served from substation sub-westmichael-018, Northeast region) beginning 2025-10-16 at 12:27 UTC. The event was classified severity P2 and affected approximately 1849 customers. Reported cause: equipment failure.
+
+Service was restored at 2025-10-16 18:52 UTC, giving a total restoration time of 385 minutes. This exceeded the P2 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Bravo was dispatched at 2026-03-20 19:03 UTC with a recorded response time of 91 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Equipment failure on Woods Knoll feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

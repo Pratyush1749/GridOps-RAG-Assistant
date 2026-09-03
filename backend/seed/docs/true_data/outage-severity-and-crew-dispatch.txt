@@ -1,0 +1,50 @@
+Outage Severity Classification and Crew Dispatch
+
+Every outage recorded in the operations database is assigned a severity of
+P1 through P4 at the time it is opened. Severity drives both dispatch
+priority and the reliability targets the utility is measured against.
+
+Severity definitions:
+
+- P1: an outage affecting a critical facility (hospital, water treatment
+  plant, emergency services), a large customer count (typically over 1,000
+  meters on a single feeder), or presenting a public safety hazard such as a
+  downed conductor. Target MTTR: under 2 hours. P1 outages require immediate
+  crew dispatch and, for events over a defined customer-count threshold,
+  notification to the regulatory/compliance team.
+- P2: a significant but non-critical outage, typically several hundred
+  customers on a feeder segment. Target MTTR: under 4 hours.
+- P3: a localized outage, often a single transformer or a short feeder
+  section, affecting a small number of customers. Target MTTR: under 8 hours.
+- P4: a single-customer or minor outage (for example, a single service drop
+  fault) with no broader feeder impact. Target MTTR: under 24 hours, and
+  frequently handled during standard business hours rather than after-hours
+  dispatch.
+
+Crew dispatch process:
+
+1. When an outage is opened, the dispatch system identifies the nearest
+   available crew based on current location and whether they are already
+   assigned to another job.
+2. The crew is dispatched with the outage location, known fault indicators
+   (if any), and severity. Dispatch time and crew name are logged in the
+   crew dispatch log.
+3. Response time is measured from dispatch to on-site arrival. Utilities
+   typically target a P1 response time under 45 minutes in normal weather
+   conditions; response-time targets are relaxed during declared storm
+   events, when multiple simultaneous outages compete for a limited number
+   of crews.
+4. During major storm events, dispatch shifts from a strict severity-first
+   model to a "greatest number of customers restored per crew-hour" model,
+   which can mean a large P2 outage is worked before a single-customer P1
+   safety hazard is fully resolved, provided the safety hazard has been
+   made safe (for example, the area has been cordoned off) in the interim.
+5. After restoration, the crew records the root cause, which is summarized
+   in the outage's rca_summary field, and the outage record is closed with a
+   restored_at timestamp used to compute MTTR.
+
+MTTR (mean time to restore) is the primary internal reliability metric,
+reported per severity tier, per region, and per feeder, and is a leading
+indicator utilities monitor to identify feeders that need capital
+investment (undergrounding, additional sectionalizing, or vegetation
+clearance) to reduce repeat outages.

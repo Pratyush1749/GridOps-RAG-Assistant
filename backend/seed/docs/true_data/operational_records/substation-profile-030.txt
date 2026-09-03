@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-daviston-030
+
+Substation sub-daviston-030 is a transmission substation located in the Pacific region, operating at a 500 kV voltage class. It was commissioned in December 2017 and its current operating status is maintenance.
+
+The substation serves 10 distribution feeders, of which 8 are currently energized. Installed transformer capacity across 7 units totals 127.75 MVA. The largest single unit is XFMR-00230 at 58.01 MVA.
+
+Feeder inventory for sub-daviston-030: feeder-030-0036 (13.2 kV, 512 A, energized); feeder-030-0094 (12.0 kV, 645 A, energized); feeder-030-0176 (13.2 kV, 403 A, maintenance); feeder-030-0220 (34.5 kV, 819 A, energized); feeder-030-0238 (13.2 kV, 361 A, energized); feeder-030-0379 (12.0 kV, 820 A, de-energized); feeder-030-0393 (34.5 kV, 550 A, energized); feeder-030-0423 (13.2 kV, 363 A, energized); feeder-030-0434 (12.0 kV, 725 A, energized); feeder-030-0478 (12.0 kV, 950 A, energized).
+
+Over the trailing twelve months, sub-daviston-030 recorded 6 outage events across its feeders, including 0 classified P1. Average restoration time (MTTR) across restored events was 283 minutes. The most frequent reported cause was equipment failure (2 events).
+
+Operational notes: switching at sub-daviston-030 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution. This substation is currently in maintenance state; confirm clearance status before dispatching any crew to site.

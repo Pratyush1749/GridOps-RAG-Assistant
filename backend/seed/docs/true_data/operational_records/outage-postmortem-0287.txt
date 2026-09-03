@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #287
+
+Outage #287 was recorded on feeder feeder-032-0433 (served from substation sub-southpatrickmouth-032, Southeast region) beginning 2026-08-05 at 18:17 UTC. The event was classified severity P1 and affected approximately 1353 customers. Reported cause: equipment failure.
+
+Service was restored at 2026-08-05 19:12 UTC, giving a total restoration time of 55 minutes. This is within the P1 target restoration window.
+
+Crew response: Crew Hotel was dispatched at 2025-11-17 16:30 UTC with a recorded response time of 17 minutes to on-site arrival. Response time met the P1 target of 45 minutes for normal weather conditions.
+
+Root cause summary: Equipment failure on Scott Branch feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #282
+
+Outage #282 was recorded on feeder feeder-023-0312 (served from substation sub-eastlydiamouth-023, Midwest region) beginning 2026-07-02 at 10:22 UTC. The event was classified severity P1 and affected approximately 3192 customers. Reported cause: vegetation contact.
+
+As of this report, outage #282 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Crew response: Crew Alpha was dispatched at 2026-01-16 05:02 UTC with a recorded response time of 170 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Vegetation contact on Amanda Port feeder segment; restored via automatic reclose.
+
+Corrective actions: no corrective action beyond standard repair was identified; the event is considered closed.

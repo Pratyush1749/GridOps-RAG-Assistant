@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-015-0190
+
+Reliability summary for feeder feeder-015-0190, a 25.0 kV distribution circuit rated 1190 A, served from substation sub-portkeith-015 in the Pacific region. Current feeder status: energized.
+
+Customer base: this feeder serves 1 metered service points — 1 commercial. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 2 recorded events (P4: 2). Average restoration time was 232 minutes across 2 restored events, for a total of approximately 1,121,316 customer-minutes of interruption on this feeder.
+
+Cause breakdown: equipment failure — 1 event(s); unknown — 1 event(s). No single failure mode dominates this feeder's outage history.

@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #299
+
+Outage #299 was recorded on feeder feeder-007-0138 (served from substation sub-lisatown-007, Southeast region) beginning 2026-01-06 at 05:06 UTC. The event was classified severity P2 and affected approximately 2898 customers. Reported cause: unknown.
+
+Service was restored at 2026-01-06 06:25 UTC, giving a total restoration time of 79 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Hotel was dispatched at 2026-03-13 08:21 UTC with a recorded response time of 49 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Unknown on Catherine Knoll feeder segment; restored via manual crew switching.
+
+Corrective actions: no corrective action beyond standard repair was identified; the event is considered closed.

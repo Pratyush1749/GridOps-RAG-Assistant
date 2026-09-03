@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #78
+
+Outage #78 was recorded on feeder feeder-021-0397 (served from substation sub-southnoah-021, Southeast region) beginning 2025-09-07 at 12:23 UTC. The event was classified severity P2 and affected approximately 3056 customers. Reported cause: planned maintenance.
+
+Service was restored at 2025-09-07 13:01 UTC, giving a total restoration time of 38 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Planned maintenance on White Greens feeder segment; restored via automatic reclose.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

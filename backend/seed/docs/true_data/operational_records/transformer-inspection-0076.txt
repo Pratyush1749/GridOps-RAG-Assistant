@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00076
+
+Asset inspection record for transformer XFMR-00076, a 42.72 MVA unit manufactured by ABB and installed in 2012 (14 years in service). The unit is connected to feeder feeder-017-0372 at substation sub-ramirezstad-017 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — clear, recently filtered. Bushings — clean, gasket intact. Cooling fans and radiators were operating normally with minor debris accumulation. Grounding connections were verified intact. Inspection performed by a Substation Technician under weather conditions: ice accumulation.
+
+SCADA alarm history for XFMR-00076 over the trailing twelve months shows 2 recorded alarms: breaker trip (1), overcurrent (1). 1 of these remain unresolved.
+
+Thermal alarm count (1) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: re-inspect at the standard interval; no defects requiring intervention were found.

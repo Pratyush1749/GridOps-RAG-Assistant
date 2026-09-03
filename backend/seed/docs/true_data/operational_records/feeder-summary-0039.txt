@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-035-0039
+
+Reliability summary for feeder feeder-035-0039, a 13.2 kV distribution circuit rated 1161 A, served from substation sub-danielchester-035 in the Northeast region. Current feeder status: energized.
+
+Customer base: this feeder serves 0 metered service points — . Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 2 recorded events (P2: 1, P4: 1). Average restoration time was 162 minutes across 2 restored events, for a total of approximately 1,073,735 customer-minutes of interruption on this feeder.
+
+Cause breakdown: planned maintenance — 1 event(s); vegetation contact — 1 event(s). No single failure mode dominates this feeder's outage history.

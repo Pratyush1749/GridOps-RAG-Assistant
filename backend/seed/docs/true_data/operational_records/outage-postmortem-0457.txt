@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #457
+
+Outage #457 was recorded on feeder feeder-008-0349 (served from substation sub-lakeroberto-008, Midwest region) beginning 2026-05-04 at 12:26 UTC. The event was classified severity P1 and affected approximately 3888 customers. Reported cause: storm damage.
+
+Service was restored at 2026-05-04 12:40 UTC, giving a total restoration time of 14 minutes. This is within the P1 target restoration window.
+
+Root cause summary: Storm damage on William Plains feeder segment; restored via manual crew switching.
+
+Corrective actions: no corrective action beyond standard repair was identified; the event is considered closed.

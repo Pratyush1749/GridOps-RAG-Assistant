@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-038-0134
+
+Reliability summary for feeder feeder-038-0134, a 4.0 kV distribution circuit rated 983 A, served from substation sub-portcolleenhaven-038 in the Southeast region. Current feeder status: energized.
+
+Customer base: this feeder serves 3 metered service points — 1 commercial, 2 residential. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 3 recorded events (P2: 2, P3: 1). Average restoration time was 106 minutes across 2 restored events, for a total of approximately 536,055 customer-minutes of interruption on this feeder.
+
+Cause breakdown: unknown — 2 event(s); storm damage — 1 event(s). No single failure mode dominates this feeder's outage history.

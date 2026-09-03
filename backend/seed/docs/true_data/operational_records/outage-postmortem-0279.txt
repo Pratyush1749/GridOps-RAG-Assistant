@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #279
+
+Outage #279 was recorded on feeder feeder-048-0328 (served from substation sub-lakelarry-048, Mountain West region) beginning 2025-11-22 at 18:12 UTC. The event was classified severity P1 and affected approximately 1850 customers. Reported cause: overload.
+
+Service was restored at 2025-11-23 01:08 UTC, giving a total restoration time of 416 minutes. This exceeded the P1 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Alpha was dispatched at 2026-02-25 02:41 UTC with a recorded response time of 152 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Overload on Berger Cape feeder segment; restored via automatic reclose.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

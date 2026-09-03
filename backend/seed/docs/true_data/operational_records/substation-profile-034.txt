@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-lakenicoleview-034
+
+Substation sub-lakenicoleview-034 is a transmission substation located in the Midwest region, operating at a 230 kV voltage class. It was commissioned in December 2020 and its current operating status is in_service.
+
+The substation serves 7 distribution feeders, of which 4 are currently energized. Installed transformer capacity across 4 units totals 126.67 MVA. The largest single unit is XFMR-00211 at 50.76 MVA.
+
+Feeder inventory for sub-lakenicoleview-034: feeder-034-0009 (12.0 kV, 258 A, maintenance); feeder-034-0110 (34.5 kV, 489 A, maintenance); feeder-034-0290 (25.0 kV, 1189 A, energized); feeder-034-0307 (13.2 kV, 269 A, maintenance); feeder-034-0432 (25.0 kV, 319 A, energized); feeder-034-0454 (12.0 kV, 623 A, energized); feeder-034-0457 (13.2 kV, 913 A, energized).
+
+Over the trailing twelve months, sub-lakenicoleview-034 recorded 9 outage events across its feeders, including 1 classified P1. Average restoration time (MTTR) across restored events was 219 minutes. The most frequent reported cause was storm damage (3 events).
+
+Operational notes: switching at sub-lakenicoleview-034 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution.
