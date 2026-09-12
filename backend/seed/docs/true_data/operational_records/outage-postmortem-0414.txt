@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #414
+
+Outage #414 was recorded on feeder feeder-006-0322 (served from substation sub-robinsonshire-006, Midwest region) beginning 2026-07-24 at 06:21 UTC. The event was classified severity P1 and affected approximately 1006 customers. Reported cause: equipment failure.
+
+As of this report, outage #414 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Crew response: Crew Bravo was dispatched at 2026-07-27 16:38 UTC with a recorded response time of 40 minutes to on-site arrival. Response time met the P1 target of 45 minutes for normal weather conditions.
+
+Root cause summary: Equipment failure on Ryan Locks feeder segment; restored via automatic reclose.
+
+Corrective actions: no corrective action beyond standard repair was identified; the event is considered closed.

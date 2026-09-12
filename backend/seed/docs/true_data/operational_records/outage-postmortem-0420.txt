@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #420
+
+Outage #420 was recorded on feeder feeder-043-0275 (served from substation sub-northjohn-043, Midwest region) beginning 2026-06-15 at 19:16 UTC. The event was classified severity P1 and affected approximately 1778 customers. Reported cause: storm damage.
+
+Service was restored at 2026-06-16 03:04 UTC, giving a total restoration time of 468 minutes. This exceeded the P1 target restoration window and was flagged for reliability review.
+
+Root cause summary: Storm damage on Joel Drive feeder segment; restored via automatic reclose.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

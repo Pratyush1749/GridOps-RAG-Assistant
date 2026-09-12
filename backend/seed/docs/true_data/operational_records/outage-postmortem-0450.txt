@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #450
+
+Outage #450 was recorded on feeder feeder-014-0109 (served from substation sub-lakechad-014, Mountain West region) beginning 2026-03-01 at 08:40 UTC. The event was classified severity P2 and affected approximately 3030 customers. Reported cause: planned maintenance.
+
+Service was restored at 2026-03-01 11:07 UTC, giving a total restoration time of 147 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Planned maintenance on Kyle Lane feeder segment; restored via automatic reclose.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

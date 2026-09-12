@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-028-0106
+
+Reliability summary for feeder feeder-028-0106, a 34.5 kV distribution circuit rated 538 A, served from substation sub-juliechester-028 in the Midwest region. Current feeder status: energized.
+
+Customer base: this feeder serves 1 metered service points — 1 residential. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 2 recorded events (P2: 1, P4: 1). Average restoration time was 240 minutes across 2 restored events, for a total of approximately 972,796 customer-minutes of interruption on this feeder.
+
+Cause breakdown: unknown — 2 event(s). No single failure mode dominates this feeder's outage history.

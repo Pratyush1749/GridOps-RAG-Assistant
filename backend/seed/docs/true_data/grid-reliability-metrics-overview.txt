@@ -1,0 +1,45 @@
+Grid Reliability Metrics Overview
+
+Utilities track a standard set of reliability indices to measure how well
+the distribution grid serves customers, and to report performance to
+regulators. These metrics are calculated from outage records (severity,
+customers_affected, started_at, restored_at) rolled up across a reporting
+period, typically monthly and annually.
+
+Key indices:
+
+- SAIDI (System Average Interruption Duration Index): the average number of
+  minutes a customer was without power during the period, calculated as the
+  sum of (customers_affected x outage duration in minutes) across all
+  outages, divided by the total number of customers served. SAIDI is the
+  most commonly cited "headline" reliability number.
+- SAIFI (System Average Interruption Frequency Index): the average number of
+  sustained interruptions a customer experienced during the period,
+  calculated as the sum of customers_affected across all sustained outages,
+  divided by the total number of customers served.
+- CAIDI (Customer Average Interruption Duration Index): the average
+  restoration time per interrupted customer, equal to SAIDI divided by
+  SAIFI. CAIDI answers "when a customer's power does go out, how long does
+  it typically take to come back."
+- MAIFI (Momentary Average Interruption Frequency Index): the average number
+  of momentary interruptions (successful automatic reclose events, typically
+  under 5 minutes) a customer experienced. MAIFI is tracked separately from
+  SAIDI/SAIFI because momentary interruptions do not count as sustained
+  outages in most regulatory frameworks, even though they are noticeable to
+  customers (clocks resetting, equipment rebooting).
+
+Most regulators exclude "major event days" from standard SAIDI/SAIFI
+reporting, typically defined statistically as a day where daily SAIDI
+exceeds a threshold based on historical daily SAIDI variability. This
+prevents a single severe storm from making a utility's routine, non-storm
+reliability performance look artificially poor, while major event days are
+still reported separately.
+
+Utilities use these indices at multiple levels of granularity: system-wide
+(for regulatory reporting), by region, and by individual feeder, to
+prioritize capital investment. A feeder with SAIDI or SAIFI significantly
+above the system average across multiple years is typically flagged as a
+"worst-performing feeder" and becomes a candidate for targeted
+reliability-improvement work such as additional sectionalizing switches,
+tree-trimming cycles shortened from the standard rotation, or conversion
+from overhead to underground construction in high-outage segments.

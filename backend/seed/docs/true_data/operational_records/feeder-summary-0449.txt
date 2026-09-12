@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-003-0449
+
+Reliability summary for feeder feeder-003-0449, a 25.0 kV distribution circuit rated 812 A, served from substation sub-newroberttown-003 in the Northeast region. Current feeder status: energized.
+
+Customer base: this feeder serves 0 metered service points — . Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 4 recorded events (P2: 2, P3: 1, P4: 1). Average restoration time was 238 minutes across 4 restored events, for a total of approximately 2,314,430 customer-minutes of interruption on this feeder.
+
+Cause breakdown: vegetation contact — 2 event(s); unknown — 1 event(s); equipment failure — 1 event(s). No single failure mode dominates this feeder's outage history.

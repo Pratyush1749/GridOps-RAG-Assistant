@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #364
+
+Outage #364 was recorded on feeder feeder-032-0100 (served from substation sub-southpatrickmouth-032, Southeast region) beginning 2026-08-05 at 08:30 UTC. The event was classified severity P2 and affected approximately 2749 customers. Reported cause: equipment failure.
+
+Service was restored at 2026-08-05 15:51 UTC, giving a total restoration time of 441 minutes. This exceeded the P2 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Echo was dispatched at 2025-12-14 08:48 UTC with a recorded response time of 56 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Equipment failure on Russell Forks feeder segment; restored via automatic reclose.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

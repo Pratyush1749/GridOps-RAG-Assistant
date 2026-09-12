@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #148
+
+Outage #148 was recorded on feeder feeder-008-0108 (served from substation sub-lakeroberto-008, Midwest region) beginning 2026-04-20 at 20:03 UTC. The event was classified severity P2 and affected approximately 3554 customers. Reported cause: animal contact.
+
+Service was restored at 2026-04-20 21:38 UTC, giving a total restoration time of 95 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew India was dispatched at 2026-03-15 02:44 UTC with a recorded response time of 113 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Animal contact on Lyons Trafficway feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

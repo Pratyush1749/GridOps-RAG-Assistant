@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #325
+
+Outage #325 was recorded on feeder feeder-017-0274 (served from substation sub-ramirezstad-017, Pacific region) beginning 2026-01-12 at 07:05 UTC. The event was classified severity P2 and affected approximately 2276 customers. Reported cause: vegetation contact.
+
+As of this report, outage #325 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Crew response: Crew Hotel was dispatched at 2025-11-19 13:41 UTC with a recorded response time of 147 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Vegetation contact on Jimmy Plain feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

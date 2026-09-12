@@ -1,0 +1,9 @@
+Storm After-Action Report — Tropical Storm Ketch
+
+After-action report for Tropical Storm Ketch, a declared major weather event affecting the Pacific region. The Emergency Response Plan was activated ahead of the event based on forecast severity, with the control center staffed to 24-hour coverage and 26 internal crews placed on standby. An additional 6 mutual-aid crews were requested from neighboring utilities under existing mutual-assistance agreements.
+
+Event impact: 6 outage events were attributed to this storm across the region, affecting approximately 17,032 customers in total. The longest single restoration took 256 minutes. During the event, dispatch operated under the storm model — prioritizing greatest customers restored per crew-hour rather than strict severity order — with safety hazards made safe and cordoned in the interim.
+
+Estimated restoration times were communicated to the public at regional granularity rather than per-customer, consistent with the Emergency Response Plan, since individual ERTs cannot be reliably estimated until damage assessment is complete. Outage tickets in areas with a common cause were consolidated into single restoration jobs to avoid duplicate crew dispatch.
+
+Debrief findings: communication loss to several substation RTUs extended the time required to confirm feeder status; RTU backup power should be reviewed. This event was classified a major event day for reliability reporting purposes and its outages are excluded from routine blue-sky SAIDI and SAIFI figures.

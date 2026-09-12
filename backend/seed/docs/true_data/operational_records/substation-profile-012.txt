@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-herrerafurt-012
+
+Substation sub-herrerafurt-012 is a transmission substation located in the Midwest region, operating at a 230 kV voltage class. It was commissioned in October 2022 and its current operating status is de-energized.
+
+The substation serves 8 distribution feeders, of which 6 are currently energized. Installed transformer capacity across 5 units totals 211.56 MVA. The largest single unit is XFMR-00069 at 48.25 MVA.
+
+Feeder inventory for sub-herrerafurt-012: feeder-012-0010 (4.0 kV, 809 A, energized); feeder-012-0033 (25.0 kV, 225 A, energized); feeder-012-0115 (4.0 kV, 458 A, maintenance); feeder-012-0258 (34.5 kV, 356 A, energized); feeder-012-0259 (25.0 kV, 675 A, energized); feeder-012-0334 (25.0 kV, 730 A, energized); feeder-012-0439 (12.0 kV, 984 A, energized); feeder-012-0497 (13.2 kV, 216 A, maintenance).
+
+Over the trailing twelve months, sub-herrerafurt-012 recorded 10 outage events across its feeders, including 0 classified P1. Average restoration time (MTTR) across restored events was 200 minutes. The most frequent reported cause was unknown (3 events).
+
+Operational notes: switching at sub-herrerafurt-012 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution. This substation is currently in de-energized state; confirm clearance status before dispatching any crew to site.

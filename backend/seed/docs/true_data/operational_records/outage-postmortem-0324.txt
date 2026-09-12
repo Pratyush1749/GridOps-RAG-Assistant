@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #324
+
+Outage #324 was recorded on feeder feeder-046-0269 (served from substation sub-westallison-046, Southeast region) beginning 2026-05-17 at 13:58 UTC. The event was classified severity P2 and affected approximately 1402 customers. Reported cause: animal contact.
+
+Service was restored at 2026-05-17 15:06 UTC, giving a total restoration time of 68 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Foxtrot was dispatched at 2025-11-19 19:36 UTC with a recorded response time of 32 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Animal contact on Ferrell Crescent feeder segment; restored via automatic reclose.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

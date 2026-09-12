@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-032-0433
+
+Reliability summary for feeder feeder-032-0433, a 4.0 kV distribution circuit rated 1120 A, served from substation sub-southpatrickmouth-032 in the Southeast region. Current feeder status: energized.
+
+Customer base: this feeder serves 1 metered service points — 1 residential. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 3 recorded events (P1: 1, P3: 2). Average restoration time was 308 minutes across 3 restored events, for a total of approximately 1,958,196 customer-minutes of interruption on this feeder.
+
+Cause breakdown: planned maintenance — 2 event(s); equipment failure — 1 event(s). No single failure mode dominates this feeder's outage history.

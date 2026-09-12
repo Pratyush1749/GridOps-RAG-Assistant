@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #22
+
+Outage #22 was recorded on feeder feeder-043-0428 (served from substation sub-northjohn-043, Midwest region) beginning 2025-09-29 at 16:16 UTC. The event was classified severity P2 and affected approximately 2157 customers. Reported cause: overload.
+
+Service was restored at 2025-09-29 23:52 UTC, giving a total restoration time of 456 minutes. This exceeded the P2 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Hotel was dispatched at 2025-09-11 03:28 UTC with a recorded response time of 132 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Overload on Franklin Alley feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

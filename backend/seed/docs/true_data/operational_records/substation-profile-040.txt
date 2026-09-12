@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-newstephanie-040
+
+Substation sub-newstephanie-040 is a transmission substation located in the Southwest region, operating at a 230 kV voltage class. It was commissioned in March 2023 and its current operating status is in_service.
+
+The substation serves 12 distribution feeders, of which 11 are currently energized. Installed transformer capacity across 11 units totals 398.35 MVA. The largest single unit is XFMR-00067 at 57.14 MVA.
+
+Feeder inventory for sub-newstephanie-040: feeder-040-0062 (34.5 kV, 636 A, energized); feeder-040-0083 (12.0 kV, 444 A, energized); feeder-040-0143 (25.0 kV, 840 A, energized); feeder-040-0233 (34.5 kV, 891 A, energized); feeder-040-0252 (25.0 kV, 1051 A, energized); feeder-040-0283 (12.0 kV, 811 A, energized); feeder-040-0303 (25.0 kV, 264 A, energized); feeder-040-0365 (25.0 kV, 454 A, maintenance); feeder-040-0375 (34.5 kV, 321 A, energized); feeder-040-0380 (13.2 kV, 366 A, energized); feeder-040-0390 (25.0 kV, 1093 A, energized); feeder-040-0484 (25.0 kV, 875 A, energized).
+
+Over the trailing twelve months, sub-newstephanie-040 recorded 15 outage events across its feeders, including 1 classified P1. Average restoration time (MTTR) across restored events was 182 minutes. The most frequent reported cause was animal contact (4 events).
+
+Operational notes: switching at sub-newstephanie-040 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution.

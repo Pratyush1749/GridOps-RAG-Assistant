@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #101
+
+Outage #101 was recorded on feeder feeder-049-0079 (served from substation sub-samuelhaven-049, Northeast region) beginning 2025-12-29 at 01:30 UTC. The event was classified severity P2 and affected approximately 1487 customers. Reported cause: planned maintenance.
+
+Service was restored at 2025-12-29 04:24 UTC, giving a total restoration time of 174 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Planned maintenance on Tracey Ridge feeder segment; restored via automatic reclose.
+
+Corrective actions: no corrective action beyond standard repair was identified; the event is considered closed.

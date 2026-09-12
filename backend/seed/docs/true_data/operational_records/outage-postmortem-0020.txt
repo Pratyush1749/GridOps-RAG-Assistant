@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #20
+
+Outage #20 was recorded on feeder feeder-038-0134 (served from substation sub-portcolleenhaven-038, Southeast region) beginning 2025-09-28 at 04:27 UTC. The event was classified severity P2 and affected approximately 735 customers. Reported cause: unknown.
+
+Service was restored at 2025-09-28 05:42 UTC, giving a total restoration time of 75 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Hotel was dispatched at 2025-11-29 16:50 UTC with a recorded response time of 27 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Unknown on Gabriel Oval feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #191
+
+Outage #191 was recorded on feeder feeder-011-0123 (served from substation sub-cassandraton-011, Pacific region) beginning 2026-04-01 at 20:10 UTC. The event was classified severity P2 and affected approximately 2762 customers. Reported cause: vegetation contact.
+
+As of this report, outage #191 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Root cause summary: Vegetation contact on Joshua Center feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

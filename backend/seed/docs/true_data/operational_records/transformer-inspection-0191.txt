@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00191
+
+Asset inspection record for transformer XFMR-00191, a 37.52 MVA unit manufactured by Siemens and installed in 1996 (30 years in service). The unit is connected to feeder feeder-008-0293 at substation sub-lakeroberto-008 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — slight discoloration, within spec. Bushings — minor surface contamination. Cooling fans and radiators were operating normally. Grounding connections were verified intact. Inspection performed by a Substation Technician under weather conditions: thunderstorms.
+
+SCADA alarm history for XFMR-00191 over the trailing twelve months shows 2 recorded alarms: low oil level (1), overcurrent (1). 0 of these remain unresolved.
+
+Thermal alarm count (1) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: no action required; return to standard inspection rotation.

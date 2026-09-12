@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-southnoah-021
+
+Substation sub-southnoah-021 is a distribution substation located in the Southeast region, operating at a 69 kV voltage class. It was commissioned in January 2021 and its current operating status is in_service.
+
+The substation serves 7 distribution feeders, of which 5 are currently energized. Installed transformer capacity across 12 units totals 358.88 MVA. The largest single unit is XFMR-00328 at 50.50 MVA.
+
+Feeder inventory for sub-southnoah-021: feeder-021-0097 (12.0 kV, 1050 A, maintenance); feeder-021-0156 (12.0 kV, 914 A, energized); feeder-021-0316 (13.2 kV, 727 A, energized); feeder-021-0333 (13.2 kV, 455 A, maintenance); feeder-021-0366 (34.5 kV, 938 A, energized); feeder-021-0397 (25.0 kV, 557 A, energized); feeder-021-0453 (12.0 kV, 509 A, energized).
+
+Over the trailing twelve months, sub-southnoah-021 recorded 9 outage events across its feeders, including 1 classified P1. Average restoration time (MTTR) across restored events was 220 minutes. The most frequent reported cause was planned maintenance (7 events).
+
+Operational notes: switching at sub-southnoah-021 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved.

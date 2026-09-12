@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-westallison-046
+
+Substation sub-westallison-046 is a transmission substation located in the Southeast region, operating at a 230 kV voltage class. It was commissioned in January 2023 and its current operating status is in_service.
+
+The substation serves 14 distribution feeders, of which 13 are currently energized. Installed transformer capacity across 17 units totals 465.12 MVA. The largest single unit is XFMR-00087 at 51.25 MVA.
+
+Feeder inventory for sub-westallison-046: feeder-046-0014 (13.2 kV, 444 A, energized); feeder-046-0023 (13.2 kV, 408 A, energized); feeder-046-0088 (12.0 kV, 277 A, energized); feeder-046-0149 (13.2 kV, 625 A, energized); feeder-046-0269 (4.0 kV, 716 A, energized); feeder-046-0270 (25.0 kV, 649 A, energized); feeder-046-0298 (13.2 kV, 1010 A, energized); feeder-046-0305 (12.0 kV, 498 A, energized); feeder-046-0340 (12.0 kV, 1012 A, energized); feeder-046-0344 (25.0 kV, 738 A, energized); feeder-046-0350 (12.0 kV, 554 A, maintenance); feeder-046-0391 (12.0 kV, 731 A, energized).
+
+Over the trailing twelve months, sub-westallison-046 recorded 10 outage events across its feeders, including 1 classified P1. Average restoration time (MTTR) across restored events was 213 minutes. The most frequent reported cause was equipment failure (3 events).
+
+Operational notes: switching at sub-westallison-046 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution.

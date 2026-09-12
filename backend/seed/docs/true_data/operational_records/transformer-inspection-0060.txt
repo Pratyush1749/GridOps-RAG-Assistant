@@ -1,0 +1,11 @@
+Transformer Inspection Report — XFMR-00060
+
+Asset inspection record for transformer XFMR-00060, a 48.81 MVA unit manufactured by Schneider Electric and installed in 2007 (19 years in service). The unit is connected to feeder feeder-028-0106 at substation sub-juliechester-028 and its current status is in_service.
+
+Visual inspection findings: oil level and condition — darkened — schedule dielectric test. Bushings — minor surface contamination. Cooling fans and radiators were cycling correctly under load. Grounding connections were verified intact. Inspection performed by a Substation Technician under weather conditions: thunderstorms.
+
+SCADA alarm history for XFMR-00060 over the trailing twelve months shows 4 recorded alarms: ground fault (1), low oil level (1), transformer overtemperature (1), voltage sag (1). 0 of these remain unresolved.
+
+Thermal alarm count (1) is below the capacity-upgrade-review threshold. No loading study is required at this time.
+
+Recommended follow-up: schedule dissolved gas analysis at the next routine maintenance window.

@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-007-0022
+
+Reliability summary for feeder feeder-007-0022, a 34.5 kV distribution circuit rated 359 A, served from substation sub-lisatown-007 in the Southeast region. Current feeder status: energized.
+
+Customer base: this feeder serves 1 metered service points — 1 commercial. Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 2 recorded events (P3: 2). Average restoration time was 444 minutes across 2 restored events, for a total of approximately 2,951,582 customer-minutes of interruption on this feeder.
+
+Cause breakdown: storm damage — 1 event(s); overload — 1 event(s). No single failure mode dominates this feeder's outage history.

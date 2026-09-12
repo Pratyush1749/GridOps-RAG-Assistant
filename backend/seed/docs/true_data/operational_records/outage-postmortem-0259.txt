@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #259
+
+Outage #259 was recorded on feeder feeder-027-0440 (served from substation sub-westdonald-027, Northeast region) beginning 2025-12-28 at 18:10 UTC. The event was classified severity P2 and affected approximately 787 customers. Reported cause: planned maintenance.
+
+Service was restored at 2025-12-28 18:46 UTC, giving a total restoration time of 36 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Bravo was dispatched at 2026-06-12 13:03 UTC with a recorded response time of 165 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Planned maintenance on Tina Garden feeder segment; restored via manual crew switching.
+
+Corrective actions: no corrective action beyond standard repair was identified; the event is considered closed.

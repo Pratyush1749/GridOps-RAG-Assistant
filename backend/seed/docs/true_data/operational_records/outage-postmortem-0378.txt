@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #378
+
+Outage #378 was recorded on feeder feeder-027-0440 (served from substation sub-westdonald-027, Northeast region) beginning 2025-10-24 at 22:47 UTC. The event was classified severity P2 and affected approximately 1057 customers. Reported cause: planned maintenance.
+
+As of this report, outage #378 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Crew response: Crew Echo was dispatched at 2026-04-06 09:29 UTC with a recorded response time of 7 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Planned maintenance on Eric Orchard feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

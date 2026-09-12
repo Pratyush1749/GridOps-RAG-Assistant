@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #258
+
+Outage #258 was recorded on feeder feeder-008-0108 (served from substation sub-lakeroberto-008, Midwest region) beginning 2025-12-08 at 08:43 UTC. The event was classified severity P2 and affected approximately 836 customers. Reported cause: animal contact.
+
+Service was restored at 2025-12-08 15:02 UTC, giving a total restoration time of 379 minutes. This exceeded the P2 target restoration window and was flagged for reliability review.
+
+Root cause summary: Animal contact on Gibson Islands feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

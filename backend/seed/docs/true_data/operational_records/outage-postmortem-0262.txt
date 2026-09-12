@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #262
+
+Outage #262 was recorded on feeder feeder-018-0489 (served from substation sub-westmichael-018, Northeast region) beginning 2025-11-23 at 13:40 UTC. The event was classified severity P2 and affected approximately 735 customers. Reported cause: planned maintenance.
+
+As of this report, outage #262 remains open with no restoration timestamp recorded. Restoration status should be confirmed with the control center.
+
+Crew response: Crew Alpha was dispatched at 2026-07-23 14:24 UTC with a recorded response time of 175 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Planned maintenance on Thornton Valleys feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

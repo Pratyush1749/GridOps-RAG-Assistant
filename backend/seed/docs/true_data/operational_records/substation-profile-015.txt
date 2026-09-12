@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-portkeith-015
+
+Substation sub-portkeith-015 is a switching substation located in the Pacific region, operating at a 115 kV voltage class. It was commissioned in February 2024 and its current operating status is in_service.
+
+The substation serves 11 distribution feeders, of which 11 are currently energized. Installed transformer capacity across 10 units totals 371.37 MVA. The largest single unit is XFMR-00308 at 59.81 MVA.
+
+Feeder inventory for sub-portkeith-015: feeder-015-0037 (4.0 kV, 875 A, energized); feeder-015-0073 (25.0 kV, 424 A, energized); feeder-015-0125 (13.2 kV, 923 A, energized); feeder-015-0190 (25.0 kV, 1190 A, energized); feeder-015-0214 (34.5 kV, 244 A, energized); feeder-015-0222 (25.0 kV, 547 A, energized); feeder-015-0232 (25.0 kV, 1065 A, energized); feeder-015-0244 (25.0 kV, 813 A, energized); feeder-015-0287 (34.5 kV, 444 A, energized); feeder-015-0295 (25.0 kV, 1105 A, energized); feeder-015-0459 (13.2 kV, 1078 A, energized).
+
+Over the trailing twelve months, sub-portkeith-015 recorded 13 outage events across its feeders, including 5 classified P1. Average restoration time (MTTR) across restored events was 230 minutes. The most frequent reported cause was equipment failure (2 events).
+
+Operational notes: switching at sub-portkeith-015 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved.

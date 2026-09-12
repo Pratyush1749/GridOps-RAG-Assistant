@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-lisatown-007
+
+Substation sub-lisatown-007 is a transmission substation located in the Southeast region, operating at a 345 kV voltage class. It was commissioned in October 2022 and its current operating status is in_service.
+
+The substation serves 11 distribution feeders, of which 11 are currently energized. Installed transformer capacity across 17 units totals 513.89 MVA. The largest single unit is XFMR-00141 at 54.98 MVA.
+
+Feeder inventory for sub-lisatown-007: feeder-007-0017 (4.0 kV, 750 A, energized); feeder-007-0022 (34.5 kV, 359 A, energized); feeder-007-0041 (34.5 kV, 644 A, energized); feeder-007-0093 (25.0 kV, 1183 A, energized); feeder-007-0138 (12.0 kV, 537 A, energized); feeder-007-0161 (34.5 kV, 1132 A, energized); feeder-007-0167 (4.0 kV, 654 A, energized); feeder-007-0177 (12.0 kV, 590 A, energized); feeder-007-0363 (13.2 kV, 447 A, energized); feeder-007-0419 (12.0 kV, 343 A, energized); feeder-007-0494 (34.5 kV, 1141 A, energized).
+
+Over the trailing twelve months, sub-lisatown-007 recorded 10 outage events across its feeders, including 0 classified P1. Average restoration time (MTTR) across restored events was 251 minutes. The most frequent reported cause was storm damage (2 events).
+
+Operational notes: switching at sub-lisatown-007 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution.

@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #162
+
+Outage #162 was recorded on feeder feeder-043-0154 (served from substation sub-northjohn-043, Midwest region) beginning 2025-11-20 at 21:54 UTC. The event was classified severity P2 and affected approximately 98 customers. Reported cause: overload.
+
+Service was restored at 2025-11-21 01:29 UTC, giving a total restoration time of 215 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Overload on Zimmerman Mews feeder segment; restored via manual crew switching.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

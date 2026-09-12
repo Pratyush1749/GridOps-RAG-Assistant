@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #482
+
+Outage #482 was recorded on feeder feeder-035-0044 (served from substation sub-danielchester-035, Northeast region) beginning 2026-05-04 at 00:48 UTC. The event was classified severity P1 and affected approximately 3945 customers. Reported cause: equipment failure.
+
+Service was restored at 2026-05-04 03:24 UTC, giving a total restoration time of 156 minutes. This exceeded the P1 target restoration window and was flagged for reliability review.
+
+Crew response: Crew Delta was dispatched at 2026-07-31 05:25 UTC with a recorded response time of 97 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Equipment failure on Mary Run feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

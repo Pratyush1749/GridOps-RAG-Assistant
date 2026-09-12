@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #291
+
+Outage #291 was recorded on feeder feeder-007-0494 (served from substation sub-lisatown-007, Southeast region) beginning 2026-06-30 at 22:44 UTC. The event was classified severity P2 and affected approximately 2895 customers. Reported cause: animal contact.
+
+Service was restored at 2026-07-01 00:00 UTC, giving a total restoration time of 76 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Echo was dispatched at 2026-06-15 14:53 UTC with a recorded response time of 11 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Animal contact on Bryant Hollow feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

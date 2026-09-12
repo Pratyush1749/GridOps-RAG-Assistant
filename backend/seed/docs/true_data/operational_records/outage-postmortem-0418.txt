@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #418
+
+Outage #418 was recorded on feeder feeder-013-0463 (served from substation sub-newkellystad-013, Southwest region) beginning 2026-07-21 at 23:22 UTC. The event was classified severity P2 and affected approximately 3965 customers. Reported cause: vegetation contact.
+
+Service was restored at 2026-07-22 02:27 UTC, giving a total restoration time of 185 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Vegetation contact on Alyssa Fields feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #267
+
+Outage #267 was recorded on feeder feeder-044-0359 (served from substation sub-northjessicaland-044, Southeast region) beginning 2026-08-10 at 10:04 UTC. The event was classified severity P1 and affected approximately 1017 customers. Reported cause: unknown.
+
+Service was restored at 2026-08-10 14:47 UTC, giving a total restoration time of 283 minutes. This exceeded the P1 target restoration window and was flagged for reliability review.
+
+Root cause summary: Unknown on Garcia Motorway feeder segment; restored via manual crew switching.
+
+Corrective actions: vegetation management cycle for this feeder segment has been advanced to the next available crew window.

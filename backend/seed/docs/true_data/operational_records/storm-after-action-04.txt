@@ -1,0 +1,9 @@
+Storm After-Action Report — Ice Storm Brindle
+
+After-action report for Ice Storm Brindle, a declared major weather event affecting the Southeast region. The Emergency Response Plan was activated ahead of the event based on forecast severity, with the control center staffed to 24-hour coverage and 14 internal crews placed on standby. Internal crew capacity was sufficient; no mutual-aid request was issued.
+
+Event impact: 16 outage events were attributed to this storm across the region, affecting approximately 37,314 customers in total. The longest single restoration took 475 minutes. During the event, dispatch operated under the storm model — prioritizing greatest customers restored per crew-hour rather than strict severity order — with safety hazards made safe and cordoned in the interim.
+
+Estimated restoration times were communicated to the public at regional granularity rather than per-customer, consistent with the Emergency Response Plan, since individual ERTs cannot be reliably estimated until damage assessment is complete. Outage tickets in areas with a common cause were consolidated into single restoration jobs to avoid duplicate crew dispatch.
+
+Debrief findings: mutual-aid crews required longer than expected onboarding on local switching procedures; a pre-event briefing packet is recommended. This event was classified a major event day for reliability reporting purposes and its outages are excluded from routine blue-sky SAIDI and SAIFI figures.

@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #421
+
+Outage #421 was recorded on feeder feeder-031-0071 (served from substation sub-eastcourtneychester-031, Midwest region) beginning 2026-05-28 at 02:01 UTC. The event was classified severity P2 and affected approximately 2856 customers. Reported cause: storm damage.
+
+Service was restored at 2026-05-28 02:56 UTC, giving a total restoration time of 55 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Storm damage on Gonzalez Rapids feeder segment; restored via manual crew switching.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

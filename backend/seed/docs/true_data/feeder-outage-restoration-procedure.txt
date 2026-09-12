@@ -1,0 +1,42 @@
+Feeder Outage Restoration Procedure
+
+A feeder is a distribution circuit that carries power from a substation to a
+group of transformers and, ultimately, to customer meters. When a feeder
+experiences a fault (for example vegetation contact, equipment failure, or
+storm damage), protective relays at the substation trip the feeder breaker,
+de-energizing every meter downstream until the fault is cleared and the
+feeder is restored.
+
+Standard restoration sequence:
+
+1. Confirm the outage. SCADA will report the feeder breaker as open and may
+   raise a scada_alarm of type "breaker trip". Cross-check against customer
+   outage calls and smart-meter "last gasp" signals to estimate the number of
+   customers affected.
+2. Attempt automatic reclose. Many feeder breakers are configured to
+   automatically attempt one or more recloses within seconds of a trip, since
+   a large share of faults (for example a tree branch making momentary
+   contact) are transient and clear themselves. If reclose succeeds, the
+   feeder re-energizes automatically and the event is logged as a momentary
+   interruption.
+3. If reclose fails, the outage is treated as sustained and a crew is
+   dispatched. Dispatch priority follows outage severity: P1 (large-scale,
+   critical facilities, or safety hazard), P2 (significant customer count),
+   P3 (localized, non-critical), P4 (single customer or minor).
+4. The crew patrols the feeder from the substation outward, or from known
+   fault-indicator locations, to locate the fault. Fault indicators mounted
+   on the line will flash or drop a target near the fault location, which
+   substantially reduces patrol time compared to a full-line walk.
+5. Once located, the crew isolates the faulted section by opening sectionalizing
+   switches on either side of the damage, allowing the unaffected portion of
+   the feeder to be re-energized from the substation (or, where a tie switch
+   exists, from a neighboring feeder) while repairs proceed on the isolated
+   section.
+6. After repair, the crew closes switches to restore the isolated section and
+   confirms normal voltage and load before closing out the job.
+
+Restoration time (MTTR) is measured from the outage start time to the
+restored_at timestamp and is a key reliability metric. Utilities typically
+target a P1 MTTR under two hours and use momentary-vs-sustained
+classification, along with SAIDI/SAIFI reliability indices, to report
+performance to regulators.

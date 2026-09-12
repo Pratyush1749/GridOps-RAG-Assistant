@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-southaaron-036
+
+Substation sub-southaaron-036 is a transmission substation located in the Pacific region, operating at a 230 kV voltage class. It was commissioned in March 2017 and its current operating status is in_service.
+
+The substation serves 11 distribution feeders, of which 8 are currently energized. Installed transformer capacity across 10 units totals 368.77 MVA. The largest single unit is XFMR-00423 at 54.66 MVA.
+
+Feeder inventory for sub-southaaron-036: feeder-036-0006 (25.0 kV, 358 A, energized); feeder-036-0029 (12.0 kV, 640 A, energized); feeder-036-0061 (34.5 kV, 524 A, maintenance); feeder-036-0194 (13.2 kV, 1137 A, energized); feeder-036-0219 (13.2 kV, 590 A, maintenance); feeder-036-0266 (4.0 kV, 660 A, de-energized); feeder-036-0301 (34.5 kV, 740 A, energized); feeder-036-0342 (34.5 kV, 577 A, energized); feeder-036-0435 (25.0 kV, 888 A, energized); feeder-036-0469 (13.2 kV, 994 A, energized); feeder-036-0485 (25.0 kV, 212 A, energized).
+
+Over the trailing twelve months, sub-southaaron-036 recorded 10 outage events across its feeders, including 0 classified P1. Average restoration time (MTTR) across restored events was 237 minutes. The most frequent reported cause was overload (3 events).
+
+Operational notes: switching at sub-southaaron-036 must be coordinated with the control center under the standard switching-order procedure. As this is a transmission-class facility, all switching orders require verification by a second qualified person before execution.

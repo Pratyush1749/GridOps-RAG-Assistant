@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #448
+
+Outage #448 was recorded on feeder feeder-003-0449 (served from substation sub-newroberttown-003, Northeast region) beginning 2026-06-06 at 22:47 UTC. The event was classified severity P2 and affected approximately 2186 customers. Reported cause: equipment failure.
+
+Service was restored at 2026-06-07 00:30 UTC, giving a total restoration time of 103 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Juliet was dispatched at 2025-11-01 20:04 UTC with a recorded response time of 116 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Equipment failure on Sabrina Inlet feeder segment; restored via automatic reclose.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

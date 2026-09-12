@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #157
+
+Outage #157 was recorded on feeder feeder-019-0181 (served from substation sub-jacquelineland-019, Northeast region) beginning 2026-03-16 at 22:29 UTC. The event was classified severity P2 and affected approximately 3696 customers. Reported cause: vegetation contact.
+
+Service was restored at 2026-03-17 02:15 UTC, giving a total restoration time of 226 minutes. This is within the P2 target restoration window.
+
+Root cause summary: Vegetation contact on Laura Port feeder segment; restored via manual crew switching.
+
+Corrective actions: the affected line section is scheduled for a follow-up patrol to confirm no residual damage remains.

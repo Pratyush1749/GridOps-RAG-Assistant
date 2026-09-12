@@ -1,0 +1,9 @@
+Outage Post-Mortem Report — Outage #12
+
+Outage #12 was recorded on feeder feeder-042-0077 (served from substation sub-westnatashaport-042, Mountain West region) beginning 2026-07-02 at 15:50 UTC. The event was classified severity P1 and affected approximately 3565 customers. Reported cause: overload.
+
+Service was restored at 2026-07-02 16:05 UTC, giving a total restoration time of 15 minutes. This is within the P1 target restoration window.
+
+Root cause summary: Overload on Bruce Stream feeder segment; restored via manual crew switching.
+
+Corrective actions: fault indicator placement along this feeder is being reviewed to reduce future patrol time.

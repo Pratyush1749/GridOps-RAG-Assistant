@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# uv
+.python-version
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+logs/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+
+# Linting
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Eval results
+# NOTE: these patterns are prefixed with backend/ because that's where the
+# app actually lives (backend/eval/, backend/seed/) - unprefixed patterns
+# like "eval/results/" only match a top-level eval/ dir at the repo root and
+# silently never match anything in this repo.
+backend/eval/results/
+
+# Seed / generated data
+backend/seed/data/
+backend/seed/*.csv
+backend/seed/*.json
+backend/seed/*.pdf
+backend/seed/*.docx
+backend/seed/docs/noisy_data/*
+!backend/seed/docs/noisy_data/.gitkeep
+
+# Docker
+*.override.yml
+
+# Secrets / keys
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/

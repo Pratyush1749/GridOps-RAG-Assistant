@@ -1,0 +1,11 @@
+Substation Operating Profile — sub-brandtside-047
+
+Substation sub-brandtside-047 is a distribution substation located in the Southwest region, operating at a 138 kV voltage class. It was commissioned in February 2020 and its current operating status is in_service.
+
+The substation serves 7 distribution feeders, of which 6 are currently energized. Installed transformer capacity across 11 units totals 332.76 MVA. The largest single unit is XFMR-00403 at 54.08 MVA.
+
+Feeder inventory for sub-brandtside-047: feeder-047-0185 (12.0 kV, 292 A, de-energized); feeder-047-0223 (4.0 kV, 520 A, energized); feeder-047-0384 (4.0 kV, 811 A, energized); feeder-047-0394 (13.2 kV, 824 A, energized); feeder-047-0398 (13.2 kV, 494 A, energized); feeder-047-0452 (34.5 kV, 526 A, energized); feeder-047-0479 (34.5 kV, 700 A, energized).
+
+Over the trailing twelve months, sub-brandtside-047 recorded 6 outage events across its feeders, including 0 classified P1. Average restoration time (MTTR) across restored events was 219 minutes. The most frequent reported cause was overload (3 events).
+
+Operational notes: switching at sub-brandtside-047 must be coordinated with the control center under the standard switching-order procedure. Distribution-class switching may be executed by a single qualified operator once the switching order is approved.

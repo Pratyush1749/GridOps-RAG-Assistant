@@ -1,0 +1,11 @@
+Outage Post-Mortem Report — Outage #246
+
+Outage #246 was recorded on feeder feeder-020-0046 (served from substation sub-newjessica-020, Mountain West region) beginning 2025-12-04 at 23:15 UTC. The event was classified severity P2 and affected approximately 1044 customers. Reported cause: animal contact.
+
+Service was restored at 2025-12-05 02:31 UTC, giving a total restoration time of 196 minutes. This is within the P2 target restoration window.
+
+Crew response: Crew Juliet was dispatched at 2025-09-21 05:28 UTC with a recorded response time of 135 minutes to on-site arrival. Response time is logged for trending against severity targets.
+
+Root cause summary: Animal contact on Valentine Rue feeder segment; restored via manual crew switching.
+
+Corrective actions: this feeder has been added to the worst-performing-feeder watch list for the current reporting year.

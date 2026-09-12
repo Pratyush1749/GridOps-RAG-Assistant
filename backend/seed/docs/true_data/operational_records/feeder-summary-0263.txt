@@ -1,0 +1,9 @@
+Feeder Reliability Summary — feeder-033-0263
+
+Reliability summary for feeder feeder-033-0263, a 4.0 kV distribution circuit rated 517 A, served from substation sub-tashatown-033 in the Southwest region. Current feeder status: energized.
+
+Customer base: this feeder serves 0 metered service points — . Only active and inactive meters count toward customers-affected figures in reliability reporting; disconnected services are excluded.
+
+Outage history over the trailing twelve months: 4 recorded events (P2: 1, P4: 3). Average restoration time was 241 minutes across 4 restored events, for a total of approximately 2,691,632 customer-minutes of interruption on this feeder.
+
+Cause breakdown: unknown — 1 event(s); equipment failure — 1 event(s); storm damage — 1 event(s); overload — 1 event(s). No single failure mode dominates this feeder's outage history.
