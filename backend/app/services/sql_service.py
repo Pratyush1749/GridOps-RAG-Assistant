@@ -77,28 +77,87 @@ def _parse_sql_payload(text: str) -> tuple[str, str]:
     return "", ""
 
 
+# Tables the Text2SQL model may see and query. Everything else in the
+# database (the `users` table with password hashes, LangGraph checkpoint
+# tables, Postgres catalogs) is hidden from the schema prompt and rejected
+# by the validator.
+OPS_TABLES = frozenset(
+    {
+        "substations",
+        "feeders",
+        "transformers",
+        "meters",
+        "outages",
+        "scada_alarms",
+        "crew_dispatch_logs",
+    }
+)
+
+_FORBIDDEN_KEYWORDS = (
+    "insert", "update", "delete", "merge", "upsert", "drop", "alter", "create",
+    "truncate", "grant", "revoke", "into", "copy", "call", "do", "execute",
+    "prepare", "deallocate", "lock", "vacuum", "analyze", "reindex", "cluster",
+    "refresh", "comment", "set", "reset", "listen", "notify", "unlisten",
+    "security", "owner",
+)  # fmt: skip
+
+# Functions with side effects, sleeps, file or network access.
+_FORBIDDEN_FUNCTIONS = re.compile(
+    r"\b(pg_\w+|lo_\w+|dblink\w*|set_config|current_setting|query_to_xml\w*|"
+    r"txid_\w+|nextval|setval)\s*\("
+)
+_CATALOG_REFERENCE = re.compile(r"\b(pg_catalog|information_schema|pg_[a-z_]+)\b")
+
+
+def _strip_literals_and_comments(sql: str) -> str:
+    """Remove comments and quoted literals so keywords inside them are ignored."""
+    sql = re.sub(r"--[^\n]*", " ", sql)
+    sql = re.sub(r"/\*.*?\*/", " ", sql, flags=re.S)
+    sql = re.sub(r"'(?:[^']|'')*'", "''", sql)
+    sql = re.sub(r"\$\$.*?\$\$", "''", sql, flags=re.S)
+    return sql
+
+
+def validate_sql(sql: str) -> tuple[bool, str]:
+    """Policy check for generated SQL. Returns (ok, reason).
+
+    Defence in depth only: the real guarantee is that `SQLService.execute_sql`
+    runs inside a READ ONLY transaction with a statement timeout and a row cap.
+    """
+    if not sql or not sql.strip():
+        return False, "empty query"
+
+    body = _strip_literals_and_comments(sql).strip().rstrip(";").strip()
+    lowered = body.lower()
+
+    if ";" in lowered:
+        return False, "multiple statements are not allowed"
+    if not re.match(r"^\(*\s*(select|with)\b", lowered):
+        return False, "only SELECT queries (optionally with a WITH clause) are allowed"
+    for kw in _FORBIDDEN_KEYWORDS:
+        if re.search(rf"\b{kw}\b", lowered):
+            return False, f"keyword '{kw.upper()}' is not allowed"
+    if _FORBIDDEN_FUNCTIONS.search(lowered):
+        return False, "system / side-effecting functions are not allowed"
+    if _CATALOG_REFERENCE.search(lowered):
+        return False, "system catalogs are not allowed"
+
+    # Every FROM / JOIN target must be an ops table or a CTE defined here.
+    cte_names = set(re.findall(r"(?:\bwith|,)\s*([a-z_][a-z0-9_]*)\s+as\s*\(", lowered))
+    scan = re.sub(r"\b(extract|substring|trim|overlay|position)\s*\([^()]*\)", "0", lowered)
+    scan = re.sub(r"\bdistinct\s+from\b", "<>", scan)
+    for ref in re.findall(r"\b(?:from|join)\s+([a-z_][a-z0-9_.]*)", scan):
+        name = ref.split(".")[-1]
+        if ref.count(".") > 1 or (ref.count(".") == 1 and not ref.startswith("public.")):
+            return False, f"table '{ref}' is not allowed"
+        if name not in OPS_TABLES and name not in cte_names:
+            return False, f"table '{name}' is not allowed"
+    return True, ""
+
+
 def is_select_only(sql: str) -> bool:
-    """Return True if the SQL is a SELECT statement only."""
-    cleaned = sql.strip().lower()
-    # Must start with select
-    if not cleaned.startswith("select"):
-        return False
-    # Must not contain dangerous keywords
-    forbidden = [
-        "insert",
-        "update",
-        "delete",
-        "drop",
-        "alter",
-        "create",
-        "truncate",
-        "grant",
-        "revoke",
-    ]
-    for kw in forbidden:
-        if re.search(rf"\b{kw}\b", cleaned):
-            return False
-    return True
+    """Backwards-compatible boolean wrapper around `validate_sql`."""
+    return validate_sql(sql)[0]
 
 
 class SQLService:
@@ -114,9 +173,9 @@ class SQLService:
         cur.execute("""
             SELECT table_name, column_name, data_type
             FROM information_schema.columns
-            WHERE table_schema = 'public'
+            WHERE table_schema = 'public' AND table_name = ANY(%s)
             ORDER BY table_name, ordinal_position;
-        """)
+        """, (sorted(OPS_TABLES),))
         rows = cur.fetchall()
         cur.close()
         conn.close()
@@ -157,20 +216,32 @@ class SQLService:
         return {"sql": sql, "explanation": explanation}
 
     def execute_sql(self, sql: str) -> list[dict]:
-        if not is_select_only(sql):
-            raise ValueError("Only SELECT statements are allowed")
+        ok, reason = validate_sql(sql)
+        if not ok:
+            raise ValueError(f"SQL rejected by policy: {reason}")
 
         cached = query_cache.get_sql_result(sql)
         if cached is not None:
             return cached
 
-        conn = psycopg2.connect(settings.database_url)
-        cur = conn.cursor()
-        cur.execute(sql)
-        columns = [desc[0] for desc in cur.description] if cur.description else []
-        rows = cur.fetchall()
-        cur.close()
-        conn.close()
+        # Hard guarantees enforced by Postgres itself, whatever the SQL text:
+        #   * READ ONLY transaction - any write (including SELECT ... INTO)
+        #     fails with "cannot execute ... in a read-only transaction"
+        #   * statement_timeout - runaway queries are cancelled
+        #   * fetchmany - at most sql_max_rows rows reach Python / the prompt
+        conn = psycopg2.connect(
+            settings.database_url,
+            options=f"-c statement_timeout={int(settings.sql_statement_timeout_ms)}",
+        )
+        try:
+            conn.set_session(readonly=True)
+            with conn.cursor() as cur:
+                cur.execute(sql)
+                columns = [desc[0] for desc in cur.description] if cur.description else []
+                rows = cur.fetchmany(settings.sql_max_rows) if cur.description else []
+            conn.rollback()
+        finally:
+            conn.close()
 
         result = [_serialize_row(dict(zip(columns, row, strict=True))) for row in rows]
         query_cache.set_sql_result(sql, result)

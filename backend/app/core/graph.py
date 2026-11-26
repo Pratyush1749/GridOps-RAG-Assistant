@@ -14,9 +14,9 @@ from app.core.state import GraphState
 from app.models import RetrievedChunk
 from app.security.spotlighting import build_spotlighted_context
 from app.services.llm_service import generate
-from app.services.rag_service import run_rag
+from app.services.rag_service import answer_from_documents, retrieve_chunks
 from app.services.router_service import classify_intent
-from app.services.sql_service import SQLService
+from app.services.sql_service import SQLService, validate_sql
 
 sql_service = SQLService()
 
@@ -52,33 +52,44 @@ def route_intent(state: GraphState) -> dict:
 
 
 def retrieve_rag(state: GraphState) -> dict:
-    response = run_rag(state["question"], flags=state.get("flags", {}))
-    # response.sources is a deduplicated list[str] of filenames only - it was
-    # previously used to build fake chunks whose .text was the filename
-    # itself, so the hybrid prompt's "Retrieved Documents" section never
-    # actually contained document text. Use the real chunk previews
-    # (text/source/score), which rag_service already computed, instead.
-    chunks = [
-        RetrievedChunk(text=c.text, source=c.source, score=c.score)
-        for c in response.metadata.retrieved_chunks
+    """Hybrid route, step 1: fetch document chunks only.
+
+    This must not call `run_rag`: that function re-classifies the question,
+    and for a hybrid question it generates and EXECUTES SQL inline, before
+    the graph reaches `request_sql_approval`. Retrieval-only keeps every SQL
+    execution behind the human approval interrupt.
+    """
+    chunks = retrieve_chunks(state["question"], flags=state.get("flags", {}))
+    chunk_dicts = [
+        RetrievedChunk(text=c.text, source=c.source, score=c.score).model_dump() for c in chunks
     ]
-    chunk_dicts = [c.model_dump() for c in chunks]
     return {
         # Stored as plain dicts, not RetrievedChunk instances: GraphState is
         # checkpointed via msgpack, which warns (and will eventually refuse)
-        # on unregistered custom types. build_spotlighted_context() below
-        # uses the live `chunks` objects directly rather than round-tripping
-        # through the persisted state.
+        # on unregistered custom types.
         "retrieved_chunks": chunk_dicts,
         "chunk_previews": chunk_dicts,
         "spotlighted_context": build_spotlighted_context(chunks),
-        "rag_cache_hit": response.cache_hit,
+        "rag_cache_hit": False,
     }
 
 
 def generate_sql_node(state: GraphState) -> dict:
     try:
         result = sql_service.generate_sql(state["question"])
+        # Validate BEFORE asking a human: never ask someone to approve a
+        # query the executor would refuse anyway (writes, system tables,
+        # tables outside the ops schema).
+        ok, reason = validate_sql(result["sql"])
+        if not ok:
+            return {
+                "generated_sql": "",
+                "sql_explanation": f"Generated SQL rejected by policy: {reason}",
+                "final_answer": (
+                    "I generated a database query but it failed the safety policy "
+                    f"({reason}), so it was not sent for approval. Try rephrasing."
+                ),
+            }
         return {
             "generated_sql": result["sql"],
             "sql_explanation": result["explanation"],
@@ -144,7 +155,8 @@ def generate_answer(state: GraphState) -> dict:
     if intent == "hybrid":
         return _generate_hybrid_answer(state)
 
-    response = run_rag(state["question"], flags=state.get("flags", {}))
+    # Intent was already decided by route_intent; answer from documents only.
+    response = answer_from_documents(state["question"], flags=state.get("flags", {}))
     chunk_previews = [chunk.model_dump() for chunk in response.metadata.retrieved_chunks]
 
     return {

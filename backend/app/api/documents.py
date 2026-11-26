@@ -23,7 +23,12 @@ from app.middleware.auth import User, get_current_user
 from app.models import RetrievedChunk
 from app.services.document_processor import DocumentProcessor
 from app.services.embedding_service import embed_texts
-from app.services.vector_store import ensure_collection, get_client, upsert_chunks
+from app.services.vector_store import (
+    ensure_collection,
+    get_client,
+    invalidate_sparse_index,
+    upsert_chunks,
+)
 
 router = APIRouter(prefix="/documents", tags=["Documents"])
 
@@ -214,6 +219,7 @@ async def delete_document(
             collection_name=settings.qdrant_collection,
             points_selector=point_ids,
         )
+        invalidate_sparse_index()
     except HTTPException:
         raise
     except Exception as exc:

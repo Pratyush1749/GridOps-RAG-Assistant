@@ -34,7 +34,7 @@ graph TB
             direction TB
             HyDE[HyDE<br/>3 hypothetical answers]
             Embed[Embed Query<br/>text-embedding-3-small]
-            HybridRet[Hybrid Retrieval<br/>Dense + Sparse TF-IDF]
+            HybridRet[Hybrid Retrieval<br/>Dense + Sparse BM25]
             RRF[RRF<br/>Reciprocal Rank Fusion]
             Rerank[Cross-Encoder Rerank]
             CRAG{CRAG Grader}
@@ -111,7 +111,7 @@ Orchestrates the entire flow using a Postgres-checkpointed state machine with co
 ### 2. Advanced RAG Pipeline
 - **HyDE (Hypothetical Document Embeddings)**: Generates 3 hypothetical answers to bridge vocabulary gaps.
 - **Embed Query**: Utilizes `text-embedding-3-small` for dense representations.
-- **Hybrid Retrieval**: Combines dense vectors (Qdrant) with a sparse keyword index. Note: the sparse side is scikit-learn **TF-IDF** built in-process over the chunk payloads, not a true BM25 index and not Qdrant-native sparse vectors.
+- **Hybrid Retrieval**: Combines dense vectors (Qdrant) with a sparse keyword index. The sparse side is an in-process **Okapi BM25** index (k1=1.5, b=0.75) over the chunk payloads, cached and rebuilt only when the collection's point count changes. It is not stored as Qdrant-native sparse vectors.
 - **RRF (Reciprocal Rank Fusion)**: Fuses dense and sparse results (k=60).
 - **Cross-Encoder Reranking**: Re-scores the top `RERANKER_INITIAL_TOP_K` (20) candidates with `cross-encoder/ms-marco-MiniLM-L-6-v2`, which reads query and chunk together rather than comparing independent embeddings. Optional Voyage `rerank-2.5` backend.
 - **CRAG (Corrective RAG)**: Grades retrieval relevance. If relevance < 0.7, falls back to **Tavily Web Search**.
@@ -153,7 +153,7 @@ Wraps expensive LLM/DB calls with distinct TTLs to drastically reduce latency an
 - `RAG Answer` (1h)
 
 ### 6. Persistent Data Stores
-- **Qdrant**: Dense vector storage over the grid-ops document corpus. (The sparse/TF-IDF index is built in-process at query time, not stored in Qdrant.)
+- **Qdrant**: Dense vector storage over the grid-ops document corpus. (The sparse BM25 index is built in-process from the chunk payloads and cached, not stored in Qdrant.)
 - **PostgreSQL 16**: Ops Database (`substations`, `feeders`, `transformers`, `meters`, `outages`, `scada_alarms`, `crew_dispatch_logs`) + LangGraph Checkpoints.
 - **Upstash Redis**: Serverless cache.
 - **OpenAI API**: GPT-4o + Embeddings.

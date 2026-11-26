@@ -30,6 +30,17 @@ def _flag(flags: dict | int | None, key: str, default):
     return flags.get(key, default)
 
 
+_reranker: Reranker | None = None
+
+
+def _get_reranker() -> Reranker:
+    """Process-wide reranker so the cross-encoder loads once, not per request."""
+    global _reranker
+    if _reranker is None:
+        _reranker = Reranker()
+    return _reranker
+
+
 def _retrieve(question: str, flags: dict | None = None) -> list[RetrievedChunk]:
     final_top_k = int(_flag(flags, "top_k", 5))
     mode = _flag(flags, "search_mode", "dense")
@@ -51,7 +62,7 @@ def _retrieve(question: str, flags: dict | None = None) -> list[RetrievedChunk]:
         chunks = search(query_embedding, top_k=retrieve_k)
 
     if rerank and chunks:
-        chunks = Reranker().rerank(question, chunks, top_k=final_top_k)
+        chunks = _get_reranker().rerank(question, chunks, top_k=final_top_k)
     else:
         chunks = chunks[:final_top_k]
 
@@ -242,7 +253,44 @@ def _run_hybrid_inline(
     return response, chunks
 
 
+def retrieve_chunks(question: str, flags: dict | None = None) -> list[RetrievedChunk]:
+    """Document retrieval only: no intent classification, no SQL.
+
+    Used by the LangGraph `retrieve_rag` node on the hybrid route. That node
+    previously called `run_rag`, which re-classified the question as hybrid
+    and ran `_run_hybrid_inline` - generating AND executing SQL before the
+    graph reached its human-approval interrupt.
+    """
+    return _retrieve(question, flags=flags)
+
+
+def answer_from_documents(question: str, flags: dict | None = None) -> ChatResponse:
+    """RAG answer for a question the graph has already routed to `rag`.
+
+    Skips `classify_intent` (the graph's `route_intent` node already did it)
+    so the API path can never reach the inline SQL helpers, which execute
+    SQL without human approval.
+    """
+    cache_ctx = {**_cache_context(flags), "route": "rag"}
+    cached = query_cache.get_rag_answer(question, cache_ctx)
+    if cached is not None:
+        resp = ChatResponse(**cached)
+        resp.cache_hit = True
+        resp.metadata.cache_hit = True
+        return resp
+
+    chunks = _retrieve(question, flags=flags)
+    response = _generate(question, chunks, flags=flags)
+    query_cache.set_rag_answer(question, response.model_dump(), cache_ctx)
+    return response
+
+
 def run_rag(question: str, flags: dict | int | None = None) -> ChatResponse:
+    """Classify intent and answer in-process (used outside the LangGraph API).
+
+    Note: the sql / hybrid branches here execute SQL without the human
+    approval gate. The HTTP API goes through `app.core.graph` instead.
+    """
     cache_ctx = _cache_context(flags) if isinstance(flags, dict) else _cache_context(None)
     cached = query_cache.get_rag_answer(question, cache_ctx)
     if cached is not None:
