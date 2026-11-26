@@ -160,7 +160,8 @@ corpus: 429 signal docs + 1,200 noise docs → 1,761 chunks.
 > These numbers were measured before the sparse leg moved from TF-IDF to BM25
 > and before the hybrid route stopped running SQL ahead of approval. The `naive`
 > column is dense-only, so it is unaffected by the BM25 change; the other
-> columns should be re-run (`make eval`) before being quoted.
+> columns should be re-run (`make eval-hybrid`, `make eval-rerank`, `make eval-crag`,
+> `make eval-all`) before being quoted.
 
 | Metric | naive | hybrid+rerank+crag (crag goldens only) | all features |
 |--------|-------|------|-----|
