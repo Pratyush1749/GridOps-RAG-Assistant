@@ -227,9 +227,34 @@ async def execute_sql(
     Set `approved: true` to execute, `approved: false` to cancel.
     """
     config = {"configurable": {"thread_id": body.query_id}}
+
+    # Only the user who asked the question may approve or reject its SQL,
+    # and only while that thread is actually paused at the approval step.
+    snapshot = await run_in_threadpool(graph.get_state, config)
+    values = snapshot.values or {}
+    if not values:
+        raise HTTPException(status_code=404, detail="Unknown query_id")
+    if values.get("user_id") != user.username:
+        raise HTTPException(status_code=403, detail="This query belongs to another user")
+    if not snapshot.next:
+        raise HTTPException(status_code=409, detail="This query is not awaiting approval")
+
+    logger.info(
+        "SQL approval decision | user={} query_id={} approved={}",
+        user.username,
+        body.query_id,
+        body.approved,
+    )
     result = await run_in_threadpool(
         graph.invoke,
         Command(resume={"approved": body.approved}),
         config,
     )
-    return _build_response(result)
+    response = _build_response(result)
+
+    # Same output controls as /query: redact PII before returning.
+    out_ok, redacted, _ = moderate_and_redact(response.answer)
+    if not out_ok:
+        raise HTTPException(status_code=500, detail="Output blocked by moderation policy")
+    response.answer = redacted
+    return response

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import threading
 import uuid
 
 from qdrant_client import QdrantClient
@@ -56,6 +57,7 @@ def upsert_chunks(chunks: list[RetrievedChunk], embeddings: list[list[float]]) -
         for chunk, embedding in zip(chunks, embeddings, strict=True)
     ]
     client.upsert(collection_name=settings.qdrant_collection, points=points)
+    invalidate_sparse_index()
 
 
 def search(query_embedding: list[float], top_k: int = 5) -> list[RetrievedChunk]:
@@ -78,32 +80,71 @@ def search(query_embedding: list[float], top_k: int = 5) -> list[RetrievedChunk]
     ]
 
 
+# ---------------------------------------------------------------------------
+# Sparse (BM25) index: built once and reused until the collection changes.
+# Previously a fresh TF-IDF index was fitted on every sparse/hybrid query by
+# scrolling the whole collection - O(corpus) work per request.
+# ---------------------------------------------------------------------------
+
+_sparse_lock = threading.Lock()
+_sparse_cache: dict = {"index": None, "point_count": None}
+
+
+def invalidate_sparse_index() -> None:
+    """Drop the cached BM25 index (call after upserting or deleting points)."""
+    with _sparse_lock:
+        _sparse_cache["index"] = None
+        _sparse_cache["point_count"] = None
+
+
+def _scroll_all_payloads(client: QdrantClient) -> list[dict]:
+    """Read every point's payload, following scroll pagination."""
+    documents: list[dict] = []
+    offset = None
+    while True:
+        points, offset = client.scroll(
+            collection_name=settings.qdrant_collection,
+            limit=1000,
+            offset=offset,
+            with_payload=True,
+            with_vectors=False,
+        )
+        for point in points:
+            payload = point.payload or {}
+            documents.append(
+                {
+                    "text": payload.get("text", ""),
+                    "source": payload.get("source", ""),
+                    "id": str(point.id),
+                }
+            )
+        if offset is None:
+            return documents
+
+
 def _build_sparse_index():
-    from app.services.sparse_vector_service import SparseVectorIndex
+    from app.services.sparse_vector_service import BM25Index
 
     ensure_collection()  # tolerate a not-yet-seeded DB
     client = get_client()
-    all_points, _next_page = client.scroll(
-        collection_name=settings.qdrant_collection,
-        limit=10000,
-        with_payload=True,
-        with_vectors=False,
-    )
-    documents = [
-        {
-            "text": point.payload.get("text", "") if point.payload else "",
-            "source": point.payload.get("source", "") if point.payload else "",
-            "id": str(point.id),
-        }
-        for point in all_points
-    ]
-    sparse_index = SparseVectorIndex()
-    sparse_index.fit(documents)
+    point_count = client.count(collection_name=settings.qdrant_collection, exact=True).count
+
+    with _sparse_lock:
+        cached = _sparse_cache["index"]
+        if cached is not None and _sparse_cache["point_count"] == point_count:
+            return cached
+
+    sparse_index = BM25Index()
+    sparse_index.fit(_scroll_all_payloads(client))
+
+    with _sparse_lock:
+        _sparse_cache["index"] = sparse_index
+        _sparse_cache["point_count"] = point_count
     return sparse_index
 
 
 def sparse_search(query_text: str, top_k: int = 5) -> list[RetrievedChunk]:
-    """Pure sparse search using TF-IDF (no dense embeddings, no fusion)."""
+    """Pure sparse search using BM25 (no dense embeddings, no fusion)."""
     sparse_index = _build_sparse_index()
     return sparse_index.search(query_text, top_k=top_k)
 
@@ -112,14 +153,16 @@ def hybrid_search(
     query_embedding: list[float],
     query_text: str,
     top_k: int = 5,
-    rrf_k: int = 60,
-    sparse_top_k: int = 20,
+    rrf_k: int | None = None,
+    candidates_per_retriever: int = 20,
 ) -> list[RetrievedChunk]:
-
+    """Dense top-N + BM25 top-N, fused with Reciprocal Rank Fusion."""
     from app.services.sparse_vector_service import fuse_rrf
 
-    dense_results = search(query_embedding, top_k=sparse_top_k)
+    if rrf_k is None:
+        rrf_k = settings.rrf_k
+    dense_results = search(query_embedding, top_k=candidates_per_retriever)
     sparse_index = _build_sparse_index()
-    sparse_results = sparse_index.search(query_text, top_k=sparse_top_k)
+    sparse_results = sparse_index.search(query_text, top_k=candidates_per_retriever)
     fused = fuse_rrf([dense_results, sparse_results], rrf_k=rrf_k)
     return fused[:top_k]

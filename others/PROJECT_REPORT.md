@@ -83,7 +83,7 @@ makes the hybrid RAG+SQL route meaningful rather than decorative.
 | **API** | FastAPI + Uvicorn, all routes under `/api/v1` |
 | **Validation / config** | Pydantic v2, pydantic-settings |
 | **Vector DB** | Qdrant (dense, 1536-d, cosine) |
-| **Sparse retrieval** | scikit-learn `TfidfVectorizer` + cosine similarity, built in-process |
+| **Sparse retrieval** | Okapi BM25 (k1=1.5, b=0.75) on a scikit-learn `CountVectorizer`, built in-process and cached |
 | **Embeddings** | OpenAI `text-embedding-3-small` (1536-d); local `all-MiniLM-L6-v2` fallback, zero-padded to 1536 |
 | **LLM** | OpenAI `gpt-4o` (answers) / `gpt-4o-mini` (routing + graders); Groq `llama-3.1-8b-instant` fallback via OpenAI-compatible endpoint |
 | **Reranker** | `cross-encoder/ms-marco-MiniLM-L-6-v2` (sentence-transformers); optional Voyage `rerank-2.5` |
@@ -112,7 +112,7 @@ Browser (React) ──HTTP+JWT──> FastAPI /api/v1
                     │                     → execute_sql (SELECT-only) → Postgres
                     └── rag ──────────> rag_service.run_rag
                                           embed (OpenAI → local fallback)
-                                          dense (Qdrant) | sparse (TF-IDF) | hybrid (RRF k=60)
+                                          dense (Qdrant) | sparse (BM25) | hybrid (RRF k=60)
                                           → cross-encoder rerank
                                           → CRAG grade → Tavily web fallback if < 0.7
                                           → spotlight + hardened prompt → gpt-4o
@@ -128,7 +128,7 @@ Browser (React) ──HTTP+JWT──> FastAPI /api/v1
 | Module | Implementation |
 |--------|----------------|
 | **Intent routing** | `services/router_service.py` — gpt-4o-mini JSON classifier, Redis-cached 24h |
-| **Hybrid retrieval** | `services/vector_store.py` + `sparse_vector_service.py` — dense top-20 + TF-IDF top-20 fused with Reciprocal Rank Fusion (k=60) |
+| **Hybrid retrieval** | `services/vector_store.py` + `sparse_vector_service.py` — dense top-20 + BM25 top-20 fused with Reciprocal Rank Fusion (k=60) |
 | **Reranking** | `services/reranking.py` — cross-encoder re-scores the top `RERANKER_INITIAL_TOP_K` (20) |
 | **HyDE** | `services/hyde.py` — 3 hypothetical answers generated, embedded, searched, deduped |
 | **CRAG** | `services/crag.py` — grader LLM scores retrieved context; below `CRAG_RELEVANCE_THRESHOLD` (0.7) falls back to Tavily |
@@ -156,6 +156,12 @@ retrieval has real noise to fail against, not just an all-signal corpus. Total
 corpus: 429 signal docs + 1,200 noise docs → 1,761 chunks.
 
 ### Measured results (1,761-chunk corpus, `service` mode)
+
+> These numbers were measured before the sparse leg moved from TF-IDF to BM25
+> and before the hybrid route stopped running SQL ahead of approval. The `naive`
+> column is dense-only, so it is unaffected by the BM25 change; the other
+> columns should be re-run (`make eval-hybrid`, `make eval-rerank`, `make eval-crag`,
+> `make eval-all`) before being quoted.
 
 | Metric | naive | hybrid+rerank+crag (crag goldens only) | all features |
 |--------|-------|------|-----|
@@ -277,14 +283,13 @@ Stated explicitly so the code and this report do not disagree:
   scored "blocked" refusal; service mode never sends the request over HTTP at
   all). The `forbidden_keywords` check still verifies no prompt/config leakage
   either way.
-- **Sparse retrieval is TF-IDF, not BM25, and not Qdrant-native.** The index is
-  rebuilt in-process on every sparse/hybrid query by scrolling the collection —
-  correct but O(collection) per query, and the main scaling bottleneck now that
-  the collection holds 1,761 chunks instead of 24.
-- **The graph re-enters the service layer for `rag` intent.** `core/graph.py`'s
-  `generate_answer` delegates to `rag_service.run_rag`, which classifies intent
-  a second time. LangGraph's clearly load-bearing role is the `sql`/`hybrid`
-  HITL approval flow and the `retrieve_rag` node feeding `_generate_hybrid_answer`.
+- **Sparse retrieval is in-process BM25, not Qdrant-native.** The index is
+  cached and rebuilt only when the collection's point count changes (or after an
+  upload/delete), but a rebuild still scrolls the whole collection.
+- **The graph no longer re-enters `run_rag`.** `retrieve_rag` uses
+  `rag_service.retrieve_chunks` (retrieval only, no SQL) and the `rag` branch of
+  `generate_answer` uses `answer_from_documents`, so intent is classified once
+  and the hybrid route cannot execute SQL before the HITL approval.
 - **`DocCacheService` / `app/storage/` are unused.** Implemented (local + S3
   backends) but not wired into the upload path.
 - **Noise ratio is ~74%, not the 95% the original design called for.** The
@@ -306,9 +311,7 @@ Stated explicitly so the code and this report do not disagree:
 ## 11. Possible Extensions
 
 - Push the noise ratio from ~74% toward the original 95/5 design target
-- Move sparse retrieval to Qdrant-native sparse vectors (or a real BM25 index),
-  and stop rebuilding the TF-IDF index on every query
-- Collapse the graph's double entry into `rag_service` (intent is classified twice)
+- Move BM25 to Qdrant-native sparse vectors so a rebuild does not scroll the collection
 - GraphRAG over asset relationships (substation → feeder → transformer → meter)
 - Streaming responses; per-request cost/latency telemetry in the metadata pane
 
