@@ -121,6 +121,11 @@ ALLOWED = [
     "SELECT crew_name FROM crew_dispatch_logs GROUP BY crew_name HAVING AVG(response_time_mins) > "
     "(SELECT AVG(response_time_mins) FROM crew_dispatch_logs)",
     "SELECT COUNT(*) FROM public.outages",
+    "SELECT o.severity, COUNT(*) FROM outages o, feeders f WHERE f.feeder_id = o.feeder_id GROUP BY 1",
+    "WITH p1 AS (SELECT * FROM outages WHERE severity = 'P1'), "
+    "slow AS (SELECT * FROM p1 WHERE mttr_minutes > 120) SELECT COUNT(*) FROM slow",
+    "SELECT AVG(EXTRACT(EPOCH FROM (restored_at - started_at)) / 60) FROM outages",
+    "SELECT * FROM outages o LEFT OUTER JOIN crew_dispatch_logs c USING (outage_id)",
 ]
 
 REJECTED = [
@@ -135,6 +140,18 @@ REJECTED = [
     "SELECT * FROM information_schema.tables",
     "SELECT set_config('statement_timeout', '0', false)",
     "",
+    # Ways around a naive FROM/JOIN check: quoted names, comma joins, JOIN
+    # chains, subqueries, and CTEs that shadow a real table (inside a
+    # non-recursive CTE body Postgres resolves `users` to the real table).
+    'SELECT * FROM "users"',
+    'SELECT * FROM "public"."users"',
+    "SELECT o.outage_id, u.password_hash FROM outages o, users u",
+    "SELECT * FROM outages o JOIN feeders f ON f.feeder_id = o.feeder_id JOIN users u ON u.id = 1",
+    "SELECT * FROM outages WHERE outage_id IN (SELECT id FROM users)",
+    "SELECT * FROM outages o CROSS JOIN LATERAL (SELECT password_hash FROM users) x",
+    "WITH users AS (SELECT * FROM users) SELECT username, password_hash FROM users",
+    "WITH a AS (SELECT * FROM users), users AS (SELECT 1) SELECT * FROM a",
+    "WITH RECURSIVE r(n) AS (SELECT 1 UNION ALL SELECT n + 1 FROM r) SELECT * FROM r",
 ]
 
 
@@ -148,6 +165,62 @@ def test_validate_sql_allows_read_queries_on_ops_tables(sql: str) -> None:
 def test_validate_sql_rejects_unsafe_queries(sql: str) -> None:
     ok, _ = validate_sql(sql)
     assert not ok
+
+
+def test_execute_sql_runs_as_reader_role_in_read_only_txn(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Postgres-side guarantees: restricted role, read-only, timeout, row cap."""
+    from app.services import sql_service
+
+    executed: list[str] = []
+    session: dict = {}
+    connect_kwargs: dict = {}
+
+    class _Cursor:
+        description = [("count",)]
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+        def execute(self, stmt):
+            executed.append(stmt if isinstance(stmt, str) else repr(stmt))
+
+        def fetchmany(self, n):
+            session["fetchmany"] = n
+            return [(86,)]
+
+    class _Conn:
+        def set_session(self, **kw):
+            session.update(kw)
+
+        def cursor(self):
+            return _Cursor()
+
+        def rollback(self):
+            session["rolled_back"] = True
+
+        def close(self):
+            pass
+
+    def _connect(_url, **kwargs):
+        connect_kwargs.update(kwargs)
+        return _Conn()
+
+    monkeypatch.setattr(sql_service.psycopg2, "connect", _connect)
+    monkeypatch.setattr(sql_service.query_cache, "get_sql_result", lambda _sql: None)
+    monkeypatch.setattr(sql_service.query_cache, "set_sql_result", lambda *_a: None)
+    monkeypatch.setattr(sql_service.settings, "sql_reader_role", "gridops_reader")
+
+    rows = sql_service.SQLService().execute_sql("SELECT COUNT(*) FROM scada_alarms")
+
+    assert rows == [{"count": 86}]
+    assert "SET LOCAL ROLE" in executed[0] and "gridops_reader" in executed[0]
+    assert executed[1] == "SELECT COUNT(*) FROM scada_alarms"
+    assert session["readonly"] is True and session["rolled_back"] is True
+    assert session["fetchmany"] == sql_service.settings.sql_max_rows
+    assert "statement_timeout" in connect_kwargs["options"]
 
 
 # ---------------------------------------------------------------------------

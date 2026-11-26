@@ -90,6 +90,9 @@ class Settings(BaseSettings):
     sql_temperature: float = 0.0
     sql_statement_timeout_ms: int = 5_000
     sql_max_rows: int = 500
+    # Postgres role approved Text2SQL runs as (SELECT on the ops tables only;
+    # created by seed/migrations/004_sql_reader_role.sql). Empty disables it.
+    sql_reader_role: str = "gridops_reader"
 
     log_json: bool = False
     log_level: str = "INFO"
